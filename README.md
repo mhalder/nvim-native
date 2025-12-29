@@ -143,22 +143,31 @@ Leader: `Space`
 
 ## Plugins
 
-| Plugin             | Purpose            |
-| ------------------ | ------------------ |
-| tokyonight.nvim    | Theme              |
-| nvim-lspconfig     | LSP                |
-| mason.nvim         | LSP/tool installer |
-| blink.cmp          | Completion         |
-| conform.nvim       | Formatting         |
-| nvim-dap           | Debugging          |
-| nvim-treesitter    | Syntax             |
-| snacks.nvim        | Picker, GitHub     |
-| oil.nvim           | File explorer      |
-| sidekick.nvim      | AI assistant       |
-| copilot.lua        | GitHub Copilot     |
-| which-key.nvim     | Key hints          |
-| vim-tmux-navigator | Tmux integration   |
-| trouble.nvim       | Diagnostics list   |
+| Plugin                    | Purpose              |
+| ------------------------- | -------------------- |
+| tokyonight.nvim           | Theme                |
+| nvim-lspconfig            | LSP                  |
+| mason.nvim                | LSP/tool installer   |
+| mason-lspconfig.nvim      | Mason LSP bridge     |
+| mason-tool-installer.nvim | Auto-install tools   |
+| lazydev.nvim              | Lua dev support      |
+| blink.cmp                 | Completion           |
+| LuaSnip                   | Snippet engine       |
+| friendly-snippets         | Snippet collection   |
+| conform.nvim              | Formatting           |
+| nvim-dap                  | Debugging            |
+| nvim-dap-python           | Python DAP adapter   |
+| nvim-dap-virtual-text     | DAP inline values    |
+| nvim-dap-view             | DAP UI               |
+| nvim-treesitter           | Syntax               |
+| snacks.nvim               | Picker, GitHub       |
+| oil.nvim                  | File explorer        |
+| sidekick.nvim             | AI assistant         |
+| copilot.lua               | GitHub Copilot       |
+| which-key.nvim            | Key hints            |
+| vim-tmux-navigator        | Tmux integration     |
+| trouble.nvim              | Diagnostics list     |
+| quicker.nvim              | Quickfix enhancement |
 
 ## License
 
