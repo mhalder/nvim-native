@@ -1,0 +1,67 @@
+local map = vim.keymap.set
+
+-- indent
+map("v", "<", "<gv", { desc = "indent left" })
+map("v", ">", ">gv", { desc = "indent right" })
+
+-- snacks picker
+map("n", "<leader>ff", function() Snacks.picker.files() end, { desc = "find files" })
+map("n", "<leader>fg", function() Snacks.picker.grep() end, { desc = "grep" })
+map("n", "<leader>fb", function() Snacks.picker.buffers() end, { desc = "buffers" })
+map("n", "<leader>fh", function() Snacks.picker.help() end, { desc = "help" })
+
+-- quit and save
+map("n", "<leader>jj", vim.cmd.quit, { desc = "quit" })
+map("n", "<leader>jk", vim.cmd.write, { desc = "save" })
+map("n", "<leader>jl", vim.cmd.wq, { desc = "save and quit" })
+map("n", "<leader>j;", function() vim.cmd("qa!") end, { desc = "quit all (no save)" })
+
+-- sidekick
+map({ "i", "n" }, "<Tab>", function()
+  if require("sidekick").nes_jump_or_apply() then
+    return
+  end
+  return "<Tab>"
+end, { expr = true, desc = "next edit suggestion" })
+map({ "n", "v" }, "<leader>aa", function()
+  require("sidekick.cli").toggle({ focus = true })
+end, { desc = "sidekick toggle" })
+map({ "n", "v" }, "<leader>ac", function()
+  require("sidekick.cli").toggle({ name = "claude", focus = true })
+end, { desc = "sidekick claude" })
+map("n", "<leader>as", function()
+  require("sidekick.cli").select({ filter = { installed = true } })
+end, { desc = "sidekick select cli" })
+map({ "n", "v" }, "<leader>ap", function()
+  require("sidekick.cli").prompt()
+end, { desc = "sidekick prompt" })
+map({ "n", "x", "i", "t" }, "<C-.>", function()
+  require("sidekick.cli").focus()
+end, { desc = "sidekick focus" })
+
+-- debugging
+local dap = require("dap")
+map("n", "<leader>dc", dap.continue, { desc = "debug continue" })
+map("n", "<leader>do", dap.step_over, { desc = "debug step over" })
+map("n", "<leader>di", dap.step_into, { desc = "debug step into" })
+map("n", "<leader>du", dap.step_out, { desc = "debug step out" })
+map("n", "<leader>db", dap.toggle_breakpoint, { desc = "toggle breakpoint" })
+map("n", "<leader>dB", function()
+  dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
+end, { desc = "conditional breakpoint" })
+map("n", "<leader>dr", dap.repl.open, { desc = "open repl" })
+map("n", "<leader>dl", dap.run_last, { desc = "run last" })
+map("n", "<leader>dt", dap.terminate, { desc = "terminate" })
+map("n", "<leader>dv", "<cmd>DapViewToggle<cr>", { desc = "toggle dap view" })
+
+-- oil
+map("n", "-", "<cmd>Oil<cr>", { desc = "open parent directory" })
+
+-- terminal
+map("t", "jk", "<C-\\><C-n>", { desc = "exit terminal mode" })
+
+-- github cli (snacks.gh)
+map("n", "<leader>gi", function() Snacks.picker.gh_issue() end, { desc = "github issues" })
+map("n", "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, { desc = "github issues (all)" })
+map("n", "<leader>gp", function() Snacks.picker.gh_pr() end, { desc = "github PRs" })
+map("n", "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end, { desc = "github PRs (all)" })
