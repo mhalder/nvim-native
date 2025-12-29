@@ -91,3 +91,11 @@ end, { desc = "github PRs (all)" })
 map("n", "<leader>gB", function()
 	Snacks.gitbrowse.open()
 end, { desc = "git browse" })
+
+-- trouble
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "diagnostics" })
+map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "buffer diagnostics" })
+map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "symbols" })
+map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
+map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
+map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", { desc = "quickfix list" })

@@ -17,6 +17,7 @@ require("sidekick-config")
 require("copilot-config")
 require("debugging-config")
 require("conform-config")
+require("trouble-config")
 
 -- user setup
 require("options")

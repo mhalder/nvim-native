@@ -7,4 +7,5 @@ require("which-key").add({
 	{ "<leader>f", group = "find" },
 	{ "<leader>g", group = "github" },
 	{ "<leader>j", group = "quit/save" },
+	{ "<leader>x", group = "trouble" },
 })

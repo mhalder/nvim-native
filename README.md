@@ -84,6 +84,17 @@ Leader: `Space`
 | ---- | ------------- |
 | `cf` | Format buffer |
 
+### Trouble (`<leader>x`)
+
+| Key  | Action             |
+| ---- | ------------------ |
+| `xx` | Diagnostics        |
+| `xX` | Buffer diagnostics |
+| `xs` | Symbols            |
+| `xl` | LSP references     |
+| `xL` | Location list      |
+| `xQ` | Quickfix list      |
+
 ### Quit/Save (`<leader>j`)
 
 | Key  | Action             |
@@ -112,6 +123,7 @@ Leader: `Space`
 │   ├── blinkcmp-config.lua
 │   ├── conform-config.lua
 │   ├── copilot-config.lua
+│   ├── trouble-config.lua
 │   ├── debugging-config.lua
 │   ├── keymaps.lua
 │   ├── lsp-config.lua
@@ -146,6 +158,7 @@ Leader: `Space`
 | copilot.lua        | GitHub Copilot     |
 | which-key.nvim     | Key hints          |
 | vim-tmux-navigator | Tmux integration   |
+| trouble.nvim       | Diagnostics list   |
 
 ## License
 
