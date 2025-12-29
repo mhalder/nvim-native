@@ -33,50 +33,55 @@ Plugins will be installed automatically on first launch.
 Leader key: `<Space>`
 
 ### Files & Search
-| Key | Description |
-|-----|-------------|
-| `<leader>ff` | Find files |
-| `<leader>fg` | Grep search |
-| `<leader>fb` | List buffers |
-| `<leader>fh` | Help tags |
-| `-` | Open parent directory (Oil) |
+
+| Key          | Description                 |
+| ------------ | --------------------------- |
+| `<leader>ff` | Find files                  |
+| `<leader>fg` | Grep search                 |
+| `<leader>fb` | List buffers                |
+| `<leader>fh` | Help tags                   |
+| `-`          | Open parent directory (Oil) |
 
 ### AI (Sidekick)
-| Key | Description |
-|-----|-------------|
-| `<Tab>` | Accept AI suggestion |
-| `<leader>aa` | Toggle Sidekick |
-| `<leader>ac` | Toggle Claude |
-| `<leader>as` | Select CLI |
-| `<leader>ap` | Prompt |
-| `<C-.>` | Focus Sidekick |
+
+| Key          | Description          |
+| ------------ | -------------------- |
+| `<Tab>`      | Accept AI suggestion |
+| `<leader>aa` | Toggle Sidekick      |
+| `<leader>ac` | Toggle Claude        |
+| `<leader>as` | Select CLI           |
+| `<leader>ap` | Prompt               |
+| `<C-.>`      | Focus Sidekick       |
 
 ### Debugging
-| Key | Description |
-|-----|-------------|
-| `<leader>dc` | Continue |
-| `<leader>do` | Step over |
-| `<leader>di` | Step into |
-| `<leader>du` | Step out |
-| `<leader>db` | Toggle breakpoint |
+
+| Key          | Description            |
+| ------------ | ---------------------- |
+| `<leader>dc` | Continue               |
+| `<leader>do` | Step over              |
+| `<leader>di` | Step into              |
+| `<leader>du` | Step out               |
+| `<leader>db` | Toggle breakpoint      |
 | `<leader>dB` | Conditional breakpoint |
-| `<leader>dr` | Open REPL |
-| `<leader>dt` | Terminate |
-| `<leader>dv` | Toggle DAP view |
+| `<leader>dr` | Open REPL              |
+| `<leader>dt` | Terminate              |
+| `<leader>dv` | Toggle DAP view        |
 
 ### Git
-| Key | Description |
-|-----|-------------|
+
+| Key          | Description   |
+| ------------ | ------------- |
 | `<leader>gi` | GitHub issues |
-| `<leader>gp` | GitHub PRs |
-| `<leader>gB` | Git browse |
+| `<leader>gp` | GitHub PRs    |
+| `<leader>gB` | Git browse    |
 
 ### Quit/Save
-| Key | Description |
-|-----|-------------|
-| `<leader>jj` | Quit |
-| `<leader>jk` | Save |
-| `<leader>jl` | Save and quit |
+
+| Key          | Description        |
+| ------------ | ------------------ |
+| `<leader>jj` | Quit               |
+| `<leader>jk` | Save               |
+| `<leader>jl` | Save and quit      |
 | `<leader>j;` | Quit all (no save) |
 
 ## License
