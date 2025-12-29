@@ -98,6 +98,7 @@ Leader: `Space`
 | Key       | Action                      |
 | --------- | --------------------------- |
 | `-`       | Open Oil (parent dir)       |
+| `C-p`     | Preview file (in Oil)       |
 | `<` / `>` | Indent (visual, repeatable) |
 | `jk`      | Exit terminal mode          |
 
