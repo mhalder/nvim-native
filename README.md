@@ -1,23 +1,14 @@
 # Neovim Configuration
 
-A modern Neovim configuration built with Lua, featuring AI assistance, LSP support, debugging, and a curated set of plugins.
+A minimal Neovim 0.12+ configuration using native `vim.pack` for plugin management.
 
 ## Requirements
 
-- Neovim 0.11+ (uses native `vim.pack`)
+- Neovim 0.12+
 - Git
-- Rust/Cargo (for blink.cmp compilation)
-- [GitHub CLI](https://cli.github.com/) (optional, for GitHub integration)
-
-## Features
-
-- AI Integration (Sidekick with Claude, GitHub Copilot)
-- Full LSP support via nvim-lspconfig and Mason
-- Autocompletion with blink.cmp and LuaSnip
-- Debugging via DAP
-- File navigation with Oil.nvim and Snacks.nvim picker
-- GitHub integration (issues, PRs, git browse)
-- Tokyo Night theme
+- Rust nightly via [rustup](https://rustup.rs/) (builds blink.cmp)
+- [uv](https://github.com/astral-sh/uv) (Python debugging)
+- [GitHub CLI](https://cli.github.com/) (optional)
 
 ## Installation
 
@@ -26,64 +17,135 @@ git clone https://github.com/yourusername/nvim ~/.config/nvim
 nvim
 ```
 
-Plugins will be installed automatically on first launch.
+Plugins install automatically on first launch.
+
+## Features
+
+**AI** - Sidekick (Claude) and GitHub Copilot integration
+**LSP** - Lua, TypeScript, Python (basedpyright), Rust
+**Formatting** - Format on save via conform.nvim (stylua, ruff, prettierd, shfmt)
+**Completion** - blink.cmp with LuaSnip snippets
+**Debugging** - DAP with Python support and virtual text
+**Navigation** - Oil file explorer, Snacks picker, tmux integration
+**GitHub** - Browse issues, PRs, open in browser
 
 ## Key Bindings
 
-Leader key: `<Space>`
+Leader: `Space`
 
-### Files & Search
+### Find (`<leader>f`)
 
-| Key          | Description                 |
-| ------------ | --------------------------- |
-| `<leader>ff` | Find files                  |
-| `<leader>fg` | Grep search                 |
-| `<leader>fb` | List buffers                |
-| `<leader>fh` | Help tags                   |
-| `-`          | Open parent directory (Oil) |
+| Key  | Action  |
+| ---- | ------- |
+| `ff` | Files   |
+| `fg` | Grep    |
+| `fb` | Buffers |
+| `fh` | Help    |
 
-### AI (Sidekick)
+### AI (`<leader>a`)
 
-| Key          | Description          |
-| ------------ | -------------------- |
-| `<Tab>`      | Accept AI suggestion |
-| `<leader>aa` | Toggle Sidekick      |
-| `<leader>ac` | Toggle Claude        |
-| `<leader>as` | Select CLI           |
-| `<leader>ap` | Prompt               |
-| `<C-.>`      | Focus Sidekick       |
+| Key   | Action            |
+| ----- | ----------------- |
+| `aa`  | Toggle Sidekick   |
+| `ac`  | Toggle Claude     |
+| `as`  | Select CLI        |
+| `ap`  | Prompt            |
+| `Tab` | Accept suggestion |
+| `C-.` | Focus Sidekick    |
 
-### Debugging
+### Debug (`<leader>d`)
 
-| Key          | Description            |
-| ------------ | ---------------------- |
-| `<leader>dc` | Continue               |
-| `<leader>do` | Step over              |
-| `<leader>di` | Step into              |
-| `<leader>du` | Step out               |
-| `<leader>db` | Toggle breakpoint      |
-| `<leader>dB` | Conditional breakpoint |
-| `<leader>dr` | Open REPL              |
-| `<leader>dt` | Terminate              |
-| `<leader>dv` | Toggle DAP view        |
+| Key  | Action                 |
+| ---- | ---------------------- |
+| `dc` | Continue               |
+| `do` | Step over              |
+| `di` | Step into              |
+| `du` | Step out               |
+| `db` | Toggle breakpoint      |
+| `dB` | Conditional breakpoint |
+| `dr` | Open REPL              |
+| `dl` | Run last               |
+| `dt` | Terminate              |
+| `dv` | Toggle DAP view        |
 
-### Git
+### Git (`<leader>g`)
 
-| Key          | Description   |
-| ------------ | ------------- |
-| `<leader>gi` | GitHub issues |
-| `<leader>gp` | GitHub PRs    |
-| `<leader>gB` | Git browse    |
+| Key  | Action              |
+| ---- | ------------------- |
+| `gi` | Issues              |
+| `gI` | Issues (all)        |
+| `gp` | Pull requests       |
+| `gP` | Pull requests (all) |
+| `gB` | Browse in browser   |
 
-### Quit/Save
+### Code (`<leader>c`)
 
-| Key          | Description        |
-| ------------ | ------------------ |
-| `<leader>jj` | Quit               |
-| `<leader>jk` | Save               |
-| `<leader>jl` | Save and quit      |
-| `<leader>j;` | Quit all (no save) |
+| Key  | Action        |
+| ---- | ------------- |
+| `cf` | Format buffer |
+
+### Quit/Save (`<leader>j`)
+
+| Key  | Action             |
+| ---- | ------------------ |
+| `jj` | Quit               |
+| `jk` | Save               |
+| `jl` | Save and quit      |
+| `j;` | Quit all (no save) |
+
+### Other
+
+| Key       | Action                      |
+| --------- | --------------------------- |
+| `-`       | Open Oil (parent dir)       |
+| `<` / `>` | Indent (visual, repeatable) |
+| `jk`      | Exit terminal mode          |
+
+## Structure
+
+```
+~/.config/nvim/
+├── init.lua
+├── lua/
+│   ├── autocommands.lua
+│   ├── blinkcmp-config.lua
+│   ├── conform-config.lua
+│   ├── copilot-config.lua
+│   ├── debugging-config.lua
+│   ├── keymaps.lua
+│   ├── lsp-config.lua
+│   ├── luasnip-config.lua
+│   ├── oil-config.lua
+│   ├── options.lua
+│   ├── plugins.lua
+│   ├── quicker-config.lua
+│   ├── sidekick-config.lua
+│   ├── snacks-config.lua
+│   ├── theme.lua
+│   ├── treesitter-config.lua
+│   └── whichkey-config.lua
+└── lsp/
+    └── lua_ls.lua
+```
+
+## Plugins
+
+| Plugin             | Purpose            |
+| ------------------ | ------------------ |
+| tokyonight.nvim    | Theme              |
+| nvim-lspconfig     | LSP                |
+| mason.nvim         | LSP/tool installer |
+| blink.cmp          | Completion         |
+| conform.nvim       | Formatting         |
+| nvim-dap           | Debugging          |
+| nvim-treesitter    | Syntax             |
+| snacks.nvim        | Picker, GitHub     |
+| oil.nvim           | File explorer      |
+| sidekick.nvim      | AI assistant       |
+| copilot.lua        | GitHub Copilot     |
+| which-key.nvim     | Key hints          |
+| vim-tmux-navigator | Tmux integration   |
 
 ## License
 
-MIT
+[MIT](LICENSE)
