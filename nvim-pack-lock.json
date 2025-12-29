@@ -8,6 +8,10 @@
       "rev": "18712d9d292dd362067de74d3b54eb90ce860ba9",
       "src": "https://github.com/saghen/blink.cmp"
     },
+    "conform.nvim": {
+      "rev": "5420c4b5ea0aeb99c09cfbd4fd0b70d257b44f25",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "copilot.lua": {
       "rev": "e78d1ffebdf6ccb6fd8be4e6898030c1cf5f9b64",
       "src": "https://github.com/zbirenbaum/copilot.lua"
