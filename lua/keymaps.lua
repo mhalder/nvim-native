@@ -65,3 +65,4 @@ map("n", "<leader>gi", function() Snacks.picker.gh_issue() end, { desc = "github
 map("n", "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, { desc = "github issues (all)" })
 map("n", "<leader>gp", function() Snacks.picker.gh_pr() end, { desc = "github PRs" })
 map("n", "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end, { desc = "github PRs (all)" })
+map("n", "<leader>gB", function() Snacks.gitbrowse.open() end, { desc = "git browse" })
