@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+local Snacks = require("snacks")
 
 -- indent
 map("v", "<", "<gv", { desc = "indent left" })
