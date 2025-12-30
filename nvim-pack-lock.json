@@ -44,6 +44,10 @@
       "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
       "src": "https://github.com/mason-org/mason.nvim"
     },
+    "mini.nvim": {
+      "rev": "43ec25063430196d36f5fff5758c9101775f3d57",
+      "src": "https://github.com/echasnovski/mini.nvim"
+    },
     "nvim-dap": {
       "rev": "818cd8787a77a97703eb1d9090543a374f79a9ac",
       "src": "https://github.com/mfussenegger/nvim-dap"

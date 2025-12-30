@@ -17,6 +17,7 @@ require("debugging-config")
 require("snacks-config")
 require("quicker-config")
 require("oil-config")
+require("mini-config")
 require("sidekick-config")
 require("whichkey-config")
 
