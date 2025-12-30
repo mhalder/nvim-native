@@ -136,6 +136,40 @@ Use with operators: `d` (delete), `c` (change), `y` (yank), `v` (visual)
 
 Use `2i(` or `2a(` to select the next/outer match.
 
+### Surround (mini.surround)
+
+| Key   | Action                |
+| ----- | --------------------- |
+| `gsa` | Add surrounding       |
+| `gsd` | Delete surrounding    |
+| `gsr` | Replace surrounding   |
+| `gsf` | Find surrounding      |
+| `gsF` | Find left             |
+| `gsh` | Highlight surrounding |
+
+### Bracket Navigation (mini.bracketed)
+
+Jump to previous/next items with `[` and `]`:
+
+| Key       | Target          |
+| --------- | --------------- |
+| `[b`/`]b` | Buffer          |
+| `[c`/`]c` | Comment block   |
+| `[x`/`]x` | Conflict marker |
+| `[d`/`]d` | Diagnostic      |
+| `[f`/`]f` | File on disk    |
+| `[i`/`]i` | Indent change   |
+| `[j`/`]j` | Jump (jumplist) |
+| `[l`/`]l` | Location list   |
+| `[o`/`]o` | Oldfile         |
+| `[q`/`]q` | Quickfix        |
+| `[t`/`]t` | Treesitter node |
+| `[u`/`]u` | Undo state      |
+| `[w`/`]w` | Window          |
+| `[y`/`]y` | Yank selection  |
+
+Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.g., `2]b`).
+
 ## Structure
 
 ```
@@ -166,34 +200,34 @@ Use `2i(` or `2a(` to select the next/outer match.
 
 ## Plugins
 
-| Plugin                    | Purpose              |
-| ------------------------- | -------------------- |
-| blink.cmp                 | Completion           |
-| conform.nvim              | Formatting           |
-| copilot.lua               | GitHub Copilot       |
-| fidget.nvim               | LSP progress         |
-| flash.nvim                | Motion navigation    |
-| friendly-snippets         | Snippet collection   |
-| lazydev.nvim              | Lua dev support      |
-| LuaSnip                   | Snippet engine       |
-| mason-lspconfig.nvim      | Mason LSP bridge     |
-| mason-tool-installer.nvim | Auto-install tools   |
-| mason.nvim                | LSP/tool installer   |
-| mini.nvim                 | Text objects, pairs  |
-| nvim-dap                  | Debugging            |
-| nvim-dap-python           | Python DAP adapter   |
-| nvim-dap-view             | DAP UI               |
-| nvim-dap-virtual-text     | DAP inline values    |
-| nvim-lspconfig            | LSP                  |
-| nvim-treesitter           | Syntax               |
-| oil.nvim                  | File explorer        |
-| quicker.nvim              | Quickfix enhancement |
-| sidekick.nvim             | AI assistant         |
-| snacks.nvim               | Picker, GitHub       |
-| tokyonight.nvim           | Theme                |
-| trouble.nvim              | Diagnostics list     |
-| vim-tmux-navigator        | Tmux integration     |
-| which-key.nvim            | Key hints            |
+| Plugin                    | Purpose                          |
+| ------------------------- | -------------------------------- |
+| blink.cmp                 | Completion                       |
+| conform.nvim              | Formatting                       |
+| copilot.lua               | GitHub Copilot                   |
+| fidget.nvim               | LSP progress                     |
+| flash.nvim                | Motion navigation                |
+| friendly-snippets         | Snippet collection               |
+| lazydev.nvim              | Lua dev support                  |
+| LuaSnip                   | Snippet engine                   |
+| mason-lspconfig.nvim      | Mason LSP bridge                 |
+| mason-tool-installer.nvim | Auto-install tools               |
+| mason.nvim                | LSP/tool installer               |
+| mini.nvim                 | Text objects, pairs, bracket nav |
+| nvim-dap                  | Debugging                        |
+| nvim-dap-python           | Python DAP adapter               |
+| nvim-dap-view             | DAP UI                           |
+| nvim-dap-virtual-text     | DAP inline values                |
+| nvim-lspconfig            | LSP                              |
+| nvim-treesitter           | Syntax                           |
+| oil.nvim                  | File explorer                    |
+| quicker.nvim              | Quickfix enhancement             |
+| sidekick.nvim             | AI assistant                     |
+| snacks.nvim               | Picker, GitHub                   |
+| tokyonight.nvim           | Theme                            |
+| trouble.nvim              | Diagnostics list                 |
+| vim-tmux-navigator        | Tmux integration                 |
+| which-key.nvim            | Key hints                        |
 
 ## License
 
