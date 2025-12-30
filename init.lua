@@ -6,6 +6,7 @@ require("plugins")
 
 -- configure plugins
 require("lsp-config")
+require("fidget-config")
 require("treesitter-config")
 require("blinkcmp-config")
 require("snacks-config")
