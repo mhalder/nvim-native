@@ -1,4 +1,14 @@
 require("mini.ai").setup()
+require("mini.bracketed").setup()
+require("mini.files").setup({
+	mappings = {
+		go_in_plus = "<CR>",
+	},
+	windows = {
+		preview = true,
+	},
+})
+require("mini.pairs").setup()
 require("mini.surround").setup({
 	mappings = {
 		add = "gsa",
@@ -10,5 +20,3 @@ require("mini.surround").setup({
 		update_n_lines = "gsn",
 	},
 })
-require("mini.pairs").setup()
-require("mini.bracketed").setup()

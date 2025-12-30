@@ -59,8 +59,10 @@ map("n", "<leader>dl", dap.run_last, { desc = "run last" })
 map("n", "<leader>dt", dap.terminate, { desc = "terminate" })
 map("n", "<leader>dv", "<cmd>DapViewToggle<cr>", { desc = "toggle dap view" })
 
--- oil
-map("n", "-", "<cmd>Oil<cr>", { desc = "open parent directory" })
+-- mini.files
+map("n", "-", function()
+	require("mini.files").open(vim.api.nvim_buf_get_name(0))
+end, { desc = "open parent directory" })
 
 -- format
 map({ "n", "v" }, "<leader>cf", function()
