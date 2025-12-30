@@ -73,7 +73,7 @@ map({ "n", "v" }, "<leader>cf", function()
 end, { desc = "format buffer" })
 
 -- terminal
-map("t", "jk", "<C-\\><C-n>", { desc = "exit terminal mode" })
+map("t", "<C-x>", "<C-\\><C-n>", { desc = "exit terminal mode" })
 
 -- github cli (snacks.gh)
 map("n", "<leader>gi", function()
