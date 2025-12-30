@@ -27,12 +27,6 @@ map("n", "<leader>j;", function()
 end, { desc = "quit all (no save)" })
 
 -- sidekick
-map({ "i", "n" }, "<Tab>", function()
-	if require("sidekick").nes_jump_or_apply() then
-		return
-	end
-	return "<Tab>"
-end, { expr = true, desc = "next edit suggestion" })
 map({ "n", "v" }, "<leader>aa", function()
 	require("sidekick.cli").toggle({ focus = true })
 end, { desc = "sidekick toggle" })
