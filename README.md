@@ -111,7 +111,9 @@ Leader: `Space`
 | `-`       | Open Oil (parent dir)       |
 | `C-p`     | Preview file (in Oil)       |
 | `<` / `>` | Indent (visual, repeatable) |
-| `jk`      | Exit terminal mode          |
+| `C-x`     | Exit terminal mode          |
+| `s`       | Flash jump                  |
+| `S`       | Flash treesitter            |
 
 ## Structure
 
@@ -168,6 +170,7 @@ Leader: `Space`
 | vim-tmux-navigator        | Tmux integration     |
 | trouble.nvim              | Diagnostics list     |
 | quicker.nvim              | Quickfix enhancement |
+| flash.nvim                | Motion navigation    |
 
 ## License
 

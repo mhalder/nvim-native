@@ -99,3 +99,14 @@ map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
 map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", { desc = "quickfix list" })
+
+-- flash
+map({ "n", "x", "o" }, "s", function()
+	require("flash").jump()
+end, { desc = "flash jump" })
+map({ "n", "x", "o" }, "S", function()
+	require("flash").treesitter()
+end, { desc = "flash treesitter" })
+map("o", "r", function()
+	require("flash").remote()
+end, { desc = "flash remote" })
