@@ -116,62 +116,84 @@ Leader: `Space`
 | `s`       | Flash jump                  |
 | `S`       | Flash treesitter            |
 
+### Text Objects (mini.ai)
+
+Use with operators: `d` (delete), `c` (change), `y` (yank), `v` (visual)
+
+| Key             | Text Object   | Example         |
+| --------------- | ------------- | --------------- |
+| `(` / `)`       | Parentheses   | `vi(` `da)`     |
+| `[` / `]`       | Brackets      | `vi[` `da]`     |
+| `{` / `}`       | Braces        | `vi{` `da}`     |
+| `<` / `>`       | Angles        | `vi<` `da>`     |
+| `b`             | Any bracket   | `vib` `dab`     |
+| `"` `'` `` ` `` | Quotes        | `vi"` `da'`     |
+| `q`             | Any quote     | `viq` `daq`     |
+| `f`             | Function call | `vif` `daf`     |
+| `a`             | Argument      | `via` `cia`     |
+| `t`             | HTML/XML tag  | `vit` `cat`     |
+| `?`             | User prompt   | `vi?` (prompts) |
+
+Use `2i(` or `2a(` to select the next/outer match.
+
 ## Structure
 
 ```
 ~/.config/nvim/
 ├── init.lua
-├── lua/
-│   ├── autocommands.lua
-│   ├── blinkcmp-config.lua
-│   ├── conform-config.lua
-│   ├── copilot-config.lua
-│   ├── trouble-config.lua
-│   ├── debugging-config.lua
-│   ├── keymaps.lua
-│   ├── lsp-config.lua
-│   ├── luasnip-config.lua
-│   ├── oil-config.lua
-│   ├── options.lua
-│   ├── plugins.lua
-│   ├── quicker-config.lua
-│   ├── sidekick-config.lua
-│   ├── snacks-config.lua
-│   ├── theme.lua
-│   ├── treesitter-config.lua
-│   └── whichkey-config.lua
-└── lsp/
-    └── lua_ls.lua
+└── lua/
+    ├── autocommands.lua
+    ├── blinkcmp-config.lua
+    ├── conform-config.lua
+    ├── copilot-config.lua
+    ├── debugging-config.lua
+    ├── fidget-config.lua
+    ├── keymaps.lua
+    ├── lsp-config.lua
+    ├── luasnip-config.lua
+    ├── mini-config.lua
+    ├── oil-config.lua
+    ├── options.lua
+    ├── plugins.lua
+    ├── quicker-config.lua
+    ├── sidekick-config.lua
+    ├── snacks-config.lua
+    ├── theme.lua
+    ├── treesitter-config.lua
+    ├── trouble-config.lua
+    └── whichkey-config.lua
 ```
 
 ## Plugins
 
 | Plugin                    | Purpose              |
 | ------------------------- | -------------------- |
-| tokyonight.nvim           | Theme                |
-| nvim-lspconfig            | LSP                  |
-| mason.nvim                | LSP/tool installer   |
+| blink.cmp                 | Completion           |
+| conform.nvim              | Formatting           |
+| copilot.lua               | GitHub Copilot       |
+| fidget.nvim               | LSP progress         |
+| flash.nvim                | Motion navigation    |
+| friendly-snippets         | Snippet collection   |
+| lazydev.nvim              | Lua dev support      |
+| LuaSnip                   | Snippet engine       |
 | mason-lspconfig.nvim      | Mason LSP bridge     |
 | mason-tool-installer.nvim | Auto-install tools   |
-| lazydev.nvim              | Lua dev support      |
-| blink.cmp                 | Completion           |
-| LuaSnip                   | Snippet engine       |
-| friendly-snippets         | Snippet collection   |
-| conform.nvim              | Formatting           |
+| mason.nvim                | LSP/tool installer   |
+| mini.nvim                 | Text objects, pairs  |
 | nvim-dap                  | Debugging            |
 | nvim-dap-python           | Python DAP adapter   |
-| nvim-dap-virtual-text     | DAP inline values    |
 | nvim-dap-view             | DAP UI               |
+| nvim-dap-virtual-text     | DAP inline values    |
+| nvim-lspconfig            | LSP                  |
 | nvim-treesitter           | Syntax               |
-| snacks.nvim               | Picker, GitHub       |
 | oil.nvim                  | File explorer        |
-| sidekick.nvim             | AI assistant         |
-| copilot.lua               | GitHub Copilot       |
-| which-key.nvim            | Key hints            |
-| vim-tmux-navigator        | Tmux integration     |
-| trouble.nvim              | Diagnostics list     |
 | quicker.nvim              | Quickfix enhancement |
-| flash.nvim                | Motion navigation    |
+| sidekick.nvim             | AI assistant         |
+| snacks.nvim               | Picker, GitHub       |
+| tokyonight.nvim           | Theme                |
+| trouble.nvim              | Diagnostics list     |
+| vim-tmux-navigator        | Tmux integration     |
+| which-key.nvim            | Key hints            |
 
 ## License
 
