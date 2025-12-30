@@ -91,6 +91,9 @@ end, { desc = "github PRs (all)" })
 map("n", "<leader>gB", function()
 	Snacks.gitbrowse.open()
 end, { desc = "git browse" })
+map("n", "<leader>gb", function()
+	Snacks.git.blame_line()
+end, { desc = "git blame line" })
 
 -- trouble
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "diagnostics" })

@@ -76,6 +76,7 @@ Leader: `Space`
 | `gI` | Issues (all)        |
 | `gp` | Pull requests       |
 | `gP` | Pull requests (all) |
+| `gb` | Blame line          |
 | `gB` | Browse in browser   |
 
 ### Code (`<leader>c`)
