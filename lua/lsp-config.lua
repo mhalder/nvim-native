@@ -40,5 +40,6 @@ require("mason-tool-installer").setup({
 		-- debuggers
 		"debugpy",
 		"delve",
+		"codelldb",
 	},
 })

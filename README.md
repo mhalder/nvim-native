@@ -26,7 +26,7 @@ Plugins install automatically on first launch.
 **Formatting** - Format on save via conform.nvim (stylua, ruff, prettierd, shfmt, goimports, rustfmt)
 **Linting** - Async linting via nvim-lint (selene, eslint_d, shellcheck, golangci-lint)
 **Completion** - blink.cmp with LuaSnip snippets
-**Debugging** - DAP with Python and Go support and virtual text
+**Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Navigation** - mini.files explorer, Snacks picker, tmux integration
 **GitHub** - Browse issues, PRs, open in browser
 
