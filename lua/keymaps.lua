@@ -57,7 +57,9 @@ end, { desc = "conditional breakpoint" })
 map("n", "<leader>dr", dap.repl.open, { desc = "open repl" })
 map("n", "<leader>dl", dap.run_last, { desc = "run last" })
 map("n", "<leader>dt", dap.terminate, { desc = "terminate" })
-map("n", "<leader>dv", "<cmd>DapViewToggle<cr>", { desc = "toggle dap view" })
+map("n", "<leader>dv", function()
+	require("dapui").toggle()
+end, { desc = "toggle dap ui" })
 
 -- mini.files
 map("n", "-", function()

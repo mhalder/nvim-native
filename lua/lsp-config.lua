@@ -39,5 +39,6 @@ require("mason-tool-installer").setup({
 		"golangci-lint",
 		-- debuggers
 		"debugpy",
+		"delve",
 	},
 })

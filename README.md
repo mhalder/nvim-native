@@ -26,7 +26,7 @@ Plugins install automatically on first launch.
 **Formatting** - Format on save via conform.nvim (stylua, ruff, prettierd, shfmt, goimports, rustfmt)
 **Linting** - Async linting via nvim-lint (selene, eslint_d, shellcheck, golangci-lint)
 **Completion** - blink.cmp with LuaSnip snippets
-**Debugging** - DAP with Python support and virtual text
+**Debugging** - DAP with Python and Go support and virtual text
 **Navigation** - mini.files explorer, Snacks picker, tmux integration
 **GitHub** - Browse issues, PRs, open in browser
 
@@ -218,9 +218,11 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | mason.nvim                | LSP/tool installer                                                  |
 | mini.nvim                 | File explorer, statusline, text objects, pairs, surround, bracketed |
 | nvim-dap                  | Debugging                                                           |
+| nvim-dap-go               | Go DAP adapter                                                      |
 | nvim-dap-python           | Python DAP adapter                                                  |
-| nvim-dap-view             | DAP UI                                                              |
+| nvim-dap-ui               | DAP UI                                                              |
 | nvim-dap-virtual-text     | DAP inline values                                                   |
+| nvim-nio                  | Async library                                                       |
 | nvim-lint                 | Async linting                                                       |
 | nvim-lspconfig            | LSP                                                                 |
 | nvim-treesitter           | Syntax                                                              |
