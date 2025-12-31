@@ -9,6 +9,7 @@ require("mini.files").setup({
 	},
 })
 require("mini.pairs").setup()
+require("mini.statusline").setup()
 require("mini.surround").setup({
 	mappings = {
 		add = "gsa",

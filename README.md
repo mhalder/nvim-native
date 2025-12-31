@@ -203,34 +203,34 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 
 ## Plugins
 
-| Plugin                    | Purpose                                                 |
-| ------------------------- | ------------------------------------------------------- |
-| blink.cmp                 | Completion                                              |
-| conform.nvim              | Formatting                                              |
-| copilot.lua               | GitHub Copilot                                          |
-| fidget.nvim               | LSP progress                                            |
-| flash.nvim                | Motion navigation                                       |
-| friendly-snippets         | Snippet collection                                      |
-| lazydev.nvim              | Lua dev support                                         |
-| LuaSnip                   | Snippet engine                                          |
-| mason-lspconfig.nvim      | Mason LSP bridge                                        |
-| mason-tool-installer.nvim | Auto-install tools                                      |
-| mason.nvim                | LSP/tool installer                                      |
-| mini.nvim                 | File explorer, text objects, pairs, surround, bracketed |
-| nvim-dap                  | Debugging                                               |
-| nvim-dap-python           | Python DAP adapter                                      |
-| nvim-dap-view             | DAP UI                                                  |
-| nvim-dap-virtual-text     | DAP inline values                                       |
-| nvim-lint                 | Async linting                                           |
-| nvim-lspconfig            | LSP                                                     |
-| nvim-treesitter           | Syntax                                                  |
-| quicker.nvim              | Quickfix enhancement                                    |
-| sidekick.nvim             | AI assistant                                            |
-| snacks.nvim               | Picker, GitHub                                          |
-| tokyonight.nvim           | Theme                                                   |
-| trouble.nvim              | Diagnostics list                                        |
-| vim-tmux-navigator        | Tmux integration                                        |
-| which-key.nvim            | Key hints                                               |
+| Plugin                    | Purpose                                                             |
+| ------------------------- | ------------------------------------------------------------------- |
+| blink.cmp                 | Completion                                                          |
+| conform.nvim              | Formatting                                                          |
+| copilot.lua               | GitHub Copilot                                                      |
+| fidget.nvim               | LSP progress                                                        |
+| flash.nvim                | Motion navigation                                                   |
+| friendly-snippets         | Snippet collection                                                  |
+| lazydev.nvim              | Lua dev support                                                     |
+| LuaSnip                   | Snippet engine                                                      |
+| mason-lspconfig.nvim      | Mason LSP bridge                                                    |
+| mason-tool-installer.nvim | Auto-install tools                                                  |
+| mason.nvim                | LSP/tool installer                                                  |
+| mini.nvim                 | File explorer, statusline, text objects, pairs, surround, bracketed |
+| nvim-dap                  | Debugging                                                           |
+| nvim-dap-python           | Python DAP adapter                                                  |
+| nvim-dap-view             | DAP UI                                                              |
+| nvim-dap-virtual-text     | DAP inline values                                                   |
+| nvim-lint                 | Async linting                                                       |
+| nvim-lspconfig            | LSP                                                                 |
+| nvim-treesitter           | Syntax                                                              |
+| quicker.nvim              | Quickfix enhancement                                                |
+| sidekick.nvim             | AI assistant                                                        |
+| snacks.nvim               | Picker, GitHub                                                      |
+| tokyonight.nvim           | Theme                                                               |
+| trouble.nvim              | Diagnostics list                                                    |
+| vim-tmux-navigator        | Tmux integration                                                    |
+| which-key.nvim            | Key hints                                                           |
 
 ## License
 
