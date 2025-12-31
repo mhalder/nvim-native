@@ -1,4 +1,10 @@
-require("lazydev").setup()
+require("lazydev").setup({
+	library = {
+		{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+		{ path = "snacks.nvim", words = { "Snacks" } },
+		{ path = "conform.nvim", words = { "conform" } },
+	},
+})
 
 require("mason").setup({
 	ui = {
@@ -21,10 +27,17 @@ require("mason-lspconfig").setup({
 
 require("mason-tool-installer").setup({
 	ensure_installed = {
+		-- formatters
 		"stylua",
 		"ruff",
 		"prettierd",
 		"shfmt",
+		-- linters
+		"selene",
+		"eslint_d",
+		"shellcheck",
+		"golangci-lint",
+		-- debuggers
 		"debugpy",
 	},
 })

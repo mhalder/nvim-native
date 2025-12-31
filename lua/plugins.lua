@@ -23,6 +23,7 @@ vim.pack.add({
 	{ src = "https://github.com/echasnovski/mini.nvim" },
 	{ src = "https://github.com/mfussenegger/nvim-dap" },
 	{ src = "https://github.com/mfussenegger/nvim-dap-python" },
+	{ src = "https://github.com/mfussenegger/nvim-lint" },
 	{ src = "https://github.com/igorlfs/nvim-dap-view" },
 	{ src = "https://github.com/theHamsta/nvim-dap-virtual-text" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },

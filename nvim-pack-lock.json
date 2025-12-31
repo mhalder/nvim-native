@@ -9,7 +9,7 @@
       "src": "https://github.com/saghen/blink.cmp"
     },
     "conform.nvim": {
-      "rev": "df83eeaab265dacd2eef139a78e502a3f8926618",
+      "rev": "4b713b9da0061a54750bfed457e190459be28c7b",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
@@ -63,6 +63,10 @@
     "nvim-dap-virtual-text": {
       "rev": "fbdb48c2ed45f4a8293d0d483f7730d24467ccb6",
       "src": "https://github.com/theHamsta/nvim-dap-virtual-text"
+    },
+    "nvim-lint": {
+      "rev": "1f19dacd945a7b1a57f29f32b2d7168384df3d36",
+      "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-lspconfig": {
       "rev": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823",

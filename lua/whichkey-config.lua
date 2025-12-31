@@ -1,3 +1,4 @@
+-- selene: allow(mixed_table)
 require("which-key").setup({
 	spec = {
 		{ "<leader>a", group = "sidekick" },

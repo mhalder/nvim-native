@@ -68,6 +68,11 @@ end, { desc = "open parent directory" })
 map({ "n", "v" }, "<leader>cf", function()
 	require("conform").format({ async = true })
 end, { desc = "format buffer" })
+map("n", "<leader>cF", function()
+	vim.g.disable_autoformat = not vim.g.disable_autoformat
+	local state = vim.g.disable_autoformat and "disabled" or "enabled"
+	vim.notify("Autoformat " .. state)
+end, { desc = "toggle autoformat" })
 
 -- terminal
 map("t", "<C-x>", "<C-\\><C-n>", { desc = "exit terminal mode" })

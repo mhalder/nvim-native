@@ -10,6 +10,7 @@ require("blink.cmp").setup({
 			auto_show = true,
 			draw = {
 				treesitter = { "lsp" },
+				-- selene: allow(mixed_table)
 				columns = { { "kind_icon", "label", "label_description", gap = 1 }, { "kind" } },
 			},
 		},
