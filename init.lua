@@ -1,5 +1,6 @@
 -- set leader before any keymaps
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 -- install plugins
 require("plugins")

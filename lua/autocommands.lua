@@ -66,7 +66,7 @@ autocmd({ "BufRead", "BufNewFile" }, {
 })
 
 -- cursorline only in active window
-autocmd({ "WinEnter", "BufEnter" }, {
+autocmd("WinEnter", {
 	desc = "Show cursorline in active window",
 	group = group,
 	callback = function()
@@ -74,7 +74,7 @@ autocmd({ "WinEnter", "BufEnter" }, {
 	end,
 })
 
-autocmd({ "WinLeave", "BufLeave" }, {
+autocmd("WinLeave", {
 	desc = "Hide cursorline in inactive window",
 	group = group,
 	callback = function()
@@ -82,15 +82,3 @@ autocmd({ "WinLeave", "BufLeave" }, {
 	end,
 })
 
--- LSP attach configuration
-autocmd("LspAttach", {
-	desc = "Configure LSP on attach",
-	group = group,
-	callback = function(args)
-		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
-
-		if client:supports_method("textDocument/completion") then
-			vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-		end
-	end,
-})

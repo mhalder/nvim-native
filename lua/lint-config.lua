@@ -12,6 +12,7 @@ lint.linters_by_ft = {
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave", "BufEnter" }, {
+	group = vim.api.nvim_create_augroup("NvimLint", { clear = true }),
 	callback = function()
 		lint.try_lint()
 	end,

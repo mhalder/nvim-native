@@ -15,7 +15,7 @@ require("conform").setup({
 		html = prettier,
 		css = prettier,
 		go = { "goimports", "gofmt" },
-		rust = { [1] = "rustfmt", lsp_format = "fallback" },
+		rust = { "rustfmt" },
 		sh = { "shfmt" },
 		bash = { "shfmt" },
 	},

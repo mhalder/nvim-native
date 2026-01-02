@@ -22,6 +22,7 @@ Plugins install automatically on first launch.
 
 **AI** - Sidekick (Claude) and GitHub Copilot integration
 **LSP** - Lua, TypeScript, Python (basedpyright), Rust
+**Treesitter** - Syntax highlighting for Lua, Python, Rust, TypeScript, JavaScript, Go, Bash, JSON, YAML, Markdown, HTML, CSS
 **Formatting** - Format on save via conform.nvim (stylua, ruff, prettierd, shfmt, goimports, rustfmt)
 **Linting** - Async linting via nvim-lint (selene, eslint_d, shellcheck, golangci-lint)
 **Completion** - blink.cmp with LuaSnip snippets
@@ -30,7 +31,7 @@ Plugins install automatically on first launch.
 
 ## Key Bindings
 
-Leader: `Space`
+Leader: `Space` | Local Leader: `\`
 
 ### Find (`<leader>f`)
 

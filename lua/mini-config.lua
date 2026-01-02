@@ -51,7 +51,9 @@ miniclue.setup({
 	},
 	clues = {
 		{ mode = "n", keys = "<Leader>a", desc = "+sidekick" },
+		{ mode = "x", keys = "<Leader>a", desc = "+sidekick" },
 		{ mode = "n", keys = "<Leader>c", desc = "+code" },
+		{ mode = "x", keys = "<Leader>c", desc = "+code" },
 		{ mode = "n", keys = "<Leader>d", desc = "+debugging" },
 		{ mode = "n", keys = "<Leader>f", desc = "+find" },
 		{ mode = "n", keys = "<Leader>j", desc = "+quit/save" },

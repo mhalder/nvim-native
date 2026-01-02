@@ -1,15 +1,14 @@
 local map = vim.keymap.set
-local pick = require("mini.pick")
 
 -- indent
 map("v", "<", "<gv", { desc = "indent left" })
 map("v", ">", ">gv", { desc = "indent right" })
 
 -- mini.pick
-map("n", "<leader>ff", pick.builtin.files, { desc = "find files" })
-map("n", "<leader>fg", pick.builtin.grep_live, { desc = "grep" })
-map("n", "<leader>fb", pick.builtin.buffers, { desc = "buffers" })
-map("n", "<leader>fh", pick.builtin.help, { desc = "help" })
+map("n", "<leader>ff", function() require("mini.pick").builtin.files() end, { desc = "find files" })
+map("n", "<leader>fg", function() require("mini.pick").builtin.grep_live() end, { desc = "grep" })
+map("n", "<leader>fb", function() require("mini.pick").builtin.buffers() end, { desc = "buffers" })
+map("n", "<leader>fh", function() require("mini.pick").builtin.help() end, { desc = "help" })
 
 -- quit and save
 map("n", "<leader>jj", vim.cmd.quit, { desc = "quit" })
@@ -37,18 +36,17 @@ map({ "n", "x", "i", "t" }, "<C-.>", function()
 end, { desc = "sidekick focus" })
 
 -- debugging
-local dap = require("dap")
-map("n", "<leader>dc", dap.continue, { desc = "debug continue" })
-map("n", "<leader>do", dap.step_over, { desc = "debug step over" })
-map("n", "<leader>di", dap.step_into, { desc = "debug step into" })
-map("n", "<leader>du", dap.step_out, { desc = "debug step out" })
-map("n", "<leader>db", dap.toggle_breakpoint, { desc = "toggle breakpoint" })
+map("n", "<leader>dc", function() require("dap").continue() end, { desc = "debug continue" })
+map("n", "<leader>do", function() require("dap").step_over() end, { desc = "debug step over" })
+map("n", "<leader>di", function() require("dap").step_into() end, { desc = "debug step into" })
+map("n", "<leader>du", function() require("dap").step_out() end, { desc = "debug step out" })
+map("n", "<leader>db", function() require("dap").toggle_breakpoint() end, { desc = "toggle breakpoint" })
 map("n", "<leader>dB", function()
-	dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
+	require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end, { desc = "conditional breakpoint" })
-map("n", "<leader>dr", dap.repl.open, { desc = "open repl" })
-map("n", "<leader>dl", dap.run_last, { desc = "run last" })
-map("n", "<leader>dt", dap.terminate, { desc = "terminate" })
+map("n", "<leader>dr", function() require("dap").repl.open() end, { desc = "open repl" })
+map("n", "<leader>dl", function() require("dap").run_last() end, { desc = "run last" })
+map("n", "<leader>dt", function() require("dap").terminate() end, { desc = "terminate" })
 map("n", "<leader>dv", function()
 	require("dapui").toggle()
 end, { desc = "toggle dap ui" })
