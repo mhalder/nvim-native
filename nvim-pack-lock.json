@@ -16,10 +16,6 @@
       "rev": "e78d1ffebdf6ccb6fd8be4e6898030c1cf5f9b64",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
-    "fidget.nvim": {
-      "rev": "64463022a1f2ff1318ab22a2ea4125ed9313a483",
-      "src": "https://github.com/j-hui/fidget.nvim"
-    },
     "friendly-snippets": {
       "rev": "572f5660cf05f8cd8834e096d7b4c921ba18e175",
       "src": "https://github.com/rafamadriz/friendly-snippets"
@@ -45,7 +41,7 @@
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nvim-dap": {
-      "rev": "818cd8787a77a97703eb1d9090543a374f79a9ac",
+      "rev": "7bb46cc612bb127d7b0e3e9ed695267d830824ec",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
     "nvim-dap-go": {
@@ -69,7 +65,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-lspconfig": {
-      "rev": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823",
+      "rev": "ac04ec3c2af08e9821b4eb64ede86072b9b213bf",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -77,7 +73,7 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "c6dd314086f7b471bf6c9110092a94ce1c06d220",
+      "rev": "1927c76aec829d40dcad24b6469cb639f1334096",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "quicker.nvim": {

@@ -1,4 +1,7 @@
 require("mini.ai").setup()
+require("mini.diff").setup()
+require("mini.git").setup()
+require("mini.icons").setup()
 local MiniMisc = require("mini.misc")
 MiniMisc.setup()
 MiniMisc.setup_restore_cursor()
@@ -65,6 +68,10 @@ miniclue.setup({
 		{ mode = "n", keys = "<Leader>j", desc = "+quit/save" },
 		{ mode = "n", keys = "<Leader>w", desc = "+window" },
 		{ mode = "n", keys = "<Leader>x", desc = "+trouble" },
+		{ mode = "n", keys = "gh", desc = "apply hunk" },
+		{ mode = "x", keys = "gh", desc = "apply hunk" },
+		{ mode = "n", keys = "gH", desc = "reset hunk" },
+		{ mode = "x", keys = "gH", desc = "reset hunk" },
 		miniclue.gen_clues.builtin_completion(),
 		miniclue.gen_clues.g(),
 		miniclue.gen_clues.marks(),

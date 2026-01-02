@@ -67,4 +67,3 @@ autocmd("WinLeave", {
 		vim.wo.cursorline = false
 	end,
 })
-
