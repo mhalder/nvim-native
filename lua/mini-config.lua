@@ -1,4 +1,8 @@
 require("mini.ai").setup()
+require("mini.misc").setup()
+MiniMisc.setup_restore_cursor()
+MiniMisc.setup_auto_root()
+MiniMisc.setup_termbg_sync()
 require("mini.bracketed").setup()
 require("mini.files").setup({
 	mappings = {
@@ -57,6 +61,7 @@ miniclue.setup({
 		{ mode = "n", keys = "<Leader>d", desc = "+debugging" },
 		{ mode = "n", keys = "<Leader>f", desc = "+find" },
 		{ mode = "n", keys = "<Leader>j", desc = "+quit/save" },
+		{ mode = "n", keys = "<Leader>w", desc = "+window" },
 		{ mode = "n", keys = "<Leader>x", desc = "+trouble" },
 		miniclue.gen_clues.builtin_completion(),
 		miniclue.gen_clues.g(),

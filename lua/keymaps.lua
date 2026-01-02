@@ -69,6 +69,9 @@ end, { desc = "toggle autoformat" })
 -- terminal
 map("t", "<C-x>", "<C-\\><C-n>", { desc = "exit terminal mode" })
 
+-- window
+map("n", "<leader>wz", function() MiniMisc.zoom() end, { desc = "zoom toggle" })
+
 -- trouble
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "diagnostics" })
 map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "buffer diagnostics" })
