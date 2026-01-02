@@ -18,7 +18,6 @@ require("debugging-config")
 require("quicker-config")
 require("mini-config")
 require("sidekick-config")
-require("whichkey-config")
 
 -- user setup
 require("options")
