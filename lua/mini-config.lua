@@ -54,7 +54,6 @@ miniclue.setup({
 		{ mode = "n", keys = "<Leader>c", desc = "+code" },
 		{ mode = "n", keys = "<Leader>d", desc = "+debugging" },
 		{ mode = "n", keys = "<Leader>f", desc = "+find" },
-		{ mode = "n", keys = "<Leader>g", desc = "+github" },
 		{ mode = "n", keys = "<Leader>j", desc = "+quit/save" },
 		{ mode = "n", keys = "<Leader>x", desc = "+trouble" },
 		miniclue.gen_clues.builtin_completion(),
