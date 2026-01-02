@@ -1,23 +1,15 @@
 local map = vim.keymap.set
-local Snacks = require("snacks")
+local pick = require("mini.pick")
 
 -- indent
 map("v", "<", "<gv", { desc = "indent left" })
 map("v", ">", ">gv", { desc = "indent right" })
 
--- snacks picker
-map("n", "<leader>ff", function()
-	Snacks.picker.files()
-end, { desc = "find files" })
-map("n", "<leader>fg", function()
-	Snacks.picker.grep()
-end, { desc = "grep" })
-map("n", "<leader>fb", function()
-	Snacks.picker.buffers()
-end, { desc = "buffers" })
-map("n", "<leader>fh", function()
-	Snacks.picker.help()
-end, { desc = "help" })
+-- mini.pick
+map("n", "<leader>ff", pick.builtin.files, { desc = "find files" })
+map("n", "<leader>fg", pick.builtin.grep_live, { desc = "grep" })
+map("n", "<leader>fb", pick.builtin.buffers, { desc = "buffers" })
+map("n", "<leader>fh", pick.builtin.help, { desc = "help" })
 
 -- quit and save
 map("n", "<leader>jj", vim.cmd.quit, { desc = "quit" })
@@ -79,26 +71,6 @@ end, { desc = "toggle autoformat" })
 -- terminal
 map("t", "<C-x>", "<C-\\><C-n>", { desc = "exit terminal mode" })
 
--- github cli (snacks.gh)
-map("n", "<leader>gi", function()
-	Snacks.picker.gh_issue()
-end, { desc = "github issues" })
-map("n", "<leader>gI", function()
-	Snacks.picker.gh_issue({ state = "all" })
-end, { desc = "github issues (all)" })
-map("n", "<leader>gp", function()
-	Snacks.picker.gh_pr()
-end, { desc = "github PRs" })
-map("n", "<leader>gP", function()
-	Snacks.picker.gh_pr({ state = "all" })
-end, { desc = "github PRs (all)" })
-map("n", "<leader>gB", function()
-	Snacks.gitbrowse.open()
-end, { desc = "git browse" })
-map("n", "<leader>gb", function()
-	Snacks.git.blame_line()
-end, { desc = "git blame line" })
-
 -- trouble
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "diagnostics" })
 map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "buffer diagnostics" })
@@ -106,14 +78,3 @@ map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
 map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", { desc = "quickfix list" })
-
--- flash
-map({ "n", "x", "o" }, "s", function()
-	require("flash").jump()
-end, { desc = "flash jump" })
-map({ "n", "x", "o" }, "S", function()
-	require("flash").treesitter()
-end, { desc = "flash treesitter" })
-map("o", "r", function()
-	require("flash").remote()
-end, { desc = "flash remote" })

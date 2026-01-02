@@ -10,14 +10,5 @@ require("mini.files").setup({
 })
 require("mini.pairs").setup()
 require("mini.statusline").setup()
-require("mini.surround").setup({
-	mappings = {
-		add = "gsa",
-		delete = "gsd",
-		replace = "gsr",
-		find = "gsf",
-		find_left = "gsF",
-		highlight = "gsh",
-		update_n_lines = "gsn",
-	},
-})
+require("mini.pick").setup()
+require("mini.surround").setup()
