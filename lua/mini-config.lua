@@ -1,5 +1,6 @@
 require("mini.ai").setup()
-require("mini.misc").setup()
+local MiniMisc = require("mini.misc")
+MiniMisc.setup()
 MiniMisc.setup_restore_cursor()
 MiniMisc.setup_auto_root()
 MiniMisc.setup_termbg_sync()
@@ -13,6 +14,7 @@ require("mini.files").setup({
 	},
 })
 require("mini.pairs").setup()
+require("mini.notify").setup()
 require("mini.statusline").setup()
 require("mini.pick").setup({
 	window = {

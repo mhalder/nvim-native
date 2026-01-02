@@ -8,7 +8,6 @@ require("plugins")
 -- configure plugins
 require("treesitter-config")
 require("lsp-config")
-require("fidget-config")
 require("luasnip-config")
 require("blinkcmp-config")
 require("copilot-config")

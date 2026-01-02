@@ -9,6 +9,7 @@ map("n", "<leader>ff", function() require("mini.pick").builtin.files() end, { de
 map("n", "<leader>fg", function() require("mini.pick").builtin.grep_live() end, { desc = "grep" })
 map("n", "<leader>fb", function() require("mini.pick").builtin.buffers() end, { desc = "buffers" })
 map("n", "<leader>fh", function() require("mini.pick").builtin.help() end, { desc = "help" })
+map("n", "<leader>fn", function() require("mini.notify").show_history() end, { desc = "notifications" })
 
 -- quit and save
 map("n", "<leader>jj", vim.cmd.quit, { desc = "quit" })
