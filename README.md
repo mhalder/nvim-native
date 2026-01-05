@@ -45,6 +45,8 @@ Leader: `Space` | Local Leader: `\`
 | `fh` | Help          |
 | `fn` | Notifications |
 
+In grep/files picker, press `<C-o>` to add glob filters (e.g., `*.md`, `src/**`).
+
 ### AI (`<leader>a`)
 
 | Key   | Action            |
@@ -87,7 +89,6 @@ Leader: `Space` | Local Leader: `\`
 | `xs` | Symbols            |
 | `xl` | LSP references     |
 | `xL` | Location list      |
-| `xQ` | Quickfix list      |
 
 ### Quit/Save (`<leader>j`)
 
@@ -118,6 +119,7 @@ Leader: `Space` | Local Leader: `\`
 
 | Key       | Action                      |
 | --------- | --------------------------- |
+| `Esc`     | Clear search highlight      |
 | `-`       | Open mini.files (parent)    |
 | `<` / `>` | Indent (visual, repeatable) |
 | `C-x`     | Exit terminal mode          |

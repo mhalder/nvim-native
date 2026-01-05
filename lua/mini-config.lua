@@ -6,7 +6,9 @@ local MiniMisc = require("mini.misc")
 MiniMisc.setup()
 MiniMisc.setup_restore_cursor()
 MiniMisc.setup_auto_root()
-MiniMisc.setup_termbg_sync()
+if not vim.env.LAZYGIT_LAUNCHED then
+	MiniMisc.setup_termbg_sync()
+end
 require("mini.bracketed").setup()
 require("mini.files").setup({
 	mappings = {

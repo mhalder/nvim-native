@@ -4,12 +4,38 @@ local map = vim.keymap.set
 map("v", "<", "<gv", { desc = "indent left" })
 map("v", ">", ">gv", { desc = "indent right" })
 
+-- clear search highlight
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "clear search highlight" })
+
 -- mini.pick
-map("n", "<leader>ff", function() require("mini.pick").builtin.files() end, { desc = "find files" })
-map("n", "<leader>fg", function() require("mini.pick").builtin.grep_live() end, { desc = "grep" })
-map("n", "<leader>fb", function() require("mini.pick").builtin.buffers() end, { desc = "buffers" })
-map("n", "<leader>fh", function() require("mini.pick").builtin.help() end, { desc = "help" })
-map("n", "<leader>fn", function() require("mini.notify").show_history() end, { desc = "notifications" })
+map("n", "<leader>ff", function()
+	require("mini.pick").builtin.files()
+end, { desc = "find files" })
+map("n", "<leader>fg", function()
+	require("mini.pick").builtin.grep_live()
+end, { desc = "grep" })
+local function pick_buffers()
+	local pick = require("mini.pick")
+	local wipe_buffer = function()
+		local matches = pick.get_picker_matches()
+		if matches and matches.current then
+			local bufnr = matches.current.bufnr
+			pick.stop()
+			vim.api.nvim_buf_delete(bufnr, {})
+			vim.schedule(pick_buffers)
+		end
+	end
+	pick.builtin.buffers({}, {
+		mappings = { wipe = { char = "<C-d>", func = wipe_buffer } },
+	})
+end
+map("n", "<leader>fb", pick_buffers, { desc = "buffers" })
+map("n", "<leader>fh", function()
+	require("mini.pick").builtin.help()
+end, { desc = "help" })
+map("n", "<leader>fn", function()
+	require("mini.notify").show_history()
+end, { desc = "notifications" })
 
 -- quit and save
 map("n", "<leader>jj", vim.cmd.quit, { desc = "quit" })
@@ -37,17 +63,33 @@ map({ "n", "x", "i", "t" }, "<C-.>", function()
 end, { desc = "sidekick focus" })
 
 -- debugging
-map("n", "<leader>dc", function() require("dap").continue() end, { desc = "debug continue" })
-map("n", "<leader>do", function() require("dap").step_over() end, { desc = "debug step over" })
-map("n", "<leader>di", function() require("dap").step_into() end, { desc = "debug step into" })
-map("n", "<leader>du", function() require("dap").step_out() end, { desc = "debug step out" })
-map("n", "<leader>db", function() require("dap").toggle_breakpoint() end, { desc = "toggle breakpoint" })
+map("n", "<leader>dc", function()
+	require("dap").continue()
+end, { desc = "debug continue" })
+map("n", "<leader>do", function()
+	require("dap").step_over()
+end, { desc = "debug step over" })
+map("n", "<leader>di", function()
+	require("dap").step_into()
+end, { desc = "debug step into" })
+map("n", "<leader>du", function()
+	require("dap").step_out()
+end, { desc = "debug step out" })
+map("n", "<leader>db", function()
+	require("dap").toggle_breakpoint()
+end, { desc = "toggle breakpoint" })
 map("n", "<leader>dB", function()
 	require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
 end, { desc = "conditional breakpoint" })
-map("n", "<leader>dr", function() require("dap").repl.open() end, { desc = "open repl" })
-map("n", "<leader>dl", function() require("dap").run_last() end, { desc = "run last" })
-map("n", "<leader>dt", function() require("dap").terminate() end, { desc = "terminate" })
+map("n", "<leader>dr", function()
+	require("dap").repl.open()
+end, { desc = "open repl" })
+map("n", "<leader>dl", function()
+	require("dap").run_last()
+end, { desc = "run last" })
+map("n", "<leader>dt", function()
+	require("dap").terminate()
+end, { desc = "terminate" })
 map("n", "<leader>dv", function()
 	require("dapui").toggle()
 end, { desc = "toggle dap ui" })
@@ -71,7 +113,9 @@ end, { desc = "toggle autoformat" })
 map("t", "<C-x>", "<C-\\><C-n>", { desc = "exit terminal mode" })
 
 -- window
-map("n", "<leader>wz", function() MiniMisc.zoom() end, { desc = "zoom toggle" })
+map("n", "<leader>wz", function()
+	MiniMisc.zoom()
+end, { desc = "zoom toggle" })
 
 -- trouble
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "diagnostics" })
