@@ -27,6 +27,9 @@ vim.o.inccommand = "split"
 vim.o.grepprg = "rg --vimgrep"
 vim.o.grepformat = "%f:%l:%c:%m"
 
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
 vim.opt.diffopt:append("algorithm:histogram,linematch:60")
 
 vim.diagnostic.config({ virtual_text = true })
