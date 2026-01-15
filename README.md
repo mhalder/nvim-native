@@ -7,6 +7,7 @@ A minimal Neovim 0.12+ configuration using native `vim.pack` for plugin manageme
 - Neovim 0.12+
 - Git
 - Rust nightly via [rustup](https://rustup.rs/) (builds blink.cmp)
+- Node.js (markdown-preview.nvim)
 - [uv](https://github.com/astral-sh/uv) (Python debugging)
 
 ## Installation
@@ -216,6 +217,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | friendly-snippets         | Snippet collection                                                                                                                      |
 | lazydev.nvim              | Lua dev support                                                                                                                         |
 | LuaSnip                   | Snippet engine                                                                                                                          |
+| markdown-preview.nvim     | Markdown preview                                                                                                                        |
 | mason-lspconfig.nvim      | Mason LSP bridge                                                                                                                        |
 | mason-tool-installer.nvim | Auto-install tools                                                                                                                      |
 | mason.nvim                | LSP/tool installer                                                                                                                      |

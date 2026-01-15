@@ -5,6 +5,9 @@ vim.api.nvim_create_autocmd("PackChanged", {
 		if name == "blink.cmp" and (kind == "install" or kind == "update") then
 			vim.system({ "cargo", "build", "--release" }, { cwd = ev.data.path }):wait()
 		end
+		if name == "markdown-preview.nvim" and (kind == "install" or kind == "update") then
+			vim.system({ "npm", "install" }, { cwd = ev.data.path .. "/app" }):wait()
+		end
 	end,
 })
 
@@ -18,6 +21,7 @@ vim.pack.add({
 	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 	{ src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
 	{ src = "https://github.com/mason-org/mason.nvim" },
+	{ src = "https://github.com/iamcco/markdown-preview.nvim" },
 	{ src = "https://github.com/echasnovski/mini.nvim" },
 	{ src = "https://github.com/leoluz/nvim-dap-go" },
 	{ src = "https://github.com/mfussenegger/nvim-dap" },

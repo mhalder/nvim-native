@@ -67,3 +67,13 @@ autocmd("WinLeave", {
 		vim.wo.cursorline = false
 	end,
 })
+
+-- load markdown-preview for markdown files
+autocmd("FileType", {
+	desc = "Load markdown-preview plugin",
+	group = group,
+	pattern = "markdown",
+	callback = function()
+		vim.cmd.packadd("markdown-preview.nvim")
+	end,
+})
