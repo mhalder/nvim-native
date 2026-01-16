@@ -14,8 +14,6 @@ require("conform").setup({
     markdown = prettier,
     html = prettier,
     css = prettier,
-    go = { "goimports", "gofmt" },
-    rust = { "rustfmt" },
     sh = { "shfmt" },
     bash = { "shfmt" },
   },

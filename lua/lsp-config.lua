@@ -16,7 +16,7 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "ts_ls", "basedpyright", "rust_analyzer" },
+  ensure_installed = { "lua_ls", "ts_ls", "basedpyright" },
   handlers = {
     function(server_name)
       require("lspconfig")[server_name].setup({})
@@ -28,17 +28,11 @@ require("mason-tool-installer").setup({
   ensure_installed = {
     -- formatters
     "stylua",
-    "ruff",
     "prettierd",
     "shfmt",
     -- linters
     "selene",
     "eslint_d",
     "shellcheck",
-    "golangci-lint",
-    -- debuggers
-    "debugpy",
-    "delve",
-    "codelldb",
   },
 })

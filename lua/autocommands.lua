@@ -9,7 +9,7 @@ autocmd("TextYankPost", {
   desc = "Highlight selection on yank",
   group = group,
   callback = function()
-    vim.hl.on_yank({ timeout = 200 })
+    vim.highlight.on_yank({ timeout = 200 })
   end,
 })
 
@@ -65,15 +65,5 @@ autocmd("WinLeave", {
   group = group,
   callback = function()
     vim.wo.cursorline = false
-  end,
-})
-
--- load markdown-preview for markdown files
-autocmd("FileType", {
-  desc = "Load markdown-preview plugin",
-  group = group,
-  pattern = "markdown",
-  callback = function()
-    vim.cmd.packadd("markdown-preview.nvim")
   end,
 })
