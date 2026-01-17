@@ -46,6 +46,8 @@ miniclue.setup({
 		{ mode = "i", keys = "<C-x>" },
 		{ mode = "n", keys = "g" },
 		{ mode = "x", keys = "g" },
+		{ mode = "n", keys = "s" },
+		{ mode = "x", keys = "s" },
 		{ mode = "n", keys = "'" },
 		{ mode = "n", keys = "`" },
 		{ mode = "x", keys = "'" },
