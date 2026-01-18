@@ -34,8 +34,59 @@ map("n", "<leader>fh", function()
 	require("mini.pick").builtin.help()
 end, { desc = "help" })
 map("n", "<leader>fn", function()
-	require("mini.notify").show_history()
+	local notify = require("mini.notify")
+	local history = notify.get_all()
+	if #history == 0 then
+		print("No notifications")
+		return
+	end
+	local items = {}
+	for i = #history, 1, -1 do
+		local n = history[i]
+		table.insert(items, { text = n.msg, level = n.hl_group or "Normal" })
+	end
+	require("mini.pick").start({
+		source = {
+			name = "Notifications",
+			items = vim.tbl_map(function(item)
+				return item.text
+			end, items),
+		},
+	})
 end, { desc = "notifications" })
+map("n", "<leader>fr", function()
+	require("mini.pick").builtin.resume()
+end, { desc = "resume" })
+map("n", "<leader>fo", function()
+	require("mini.extra").pickers.oldfiles()
+end, { desc = "oldfiles" })
+map("n", "<leader>f/", function()
+	require("mini.extra").pickers.buf_lines({ scope = "current" })
+end, { desc = "buffer lines" })
+map("n", "<leader>fw", function()
+	require("mini.pick").builtin.grep({ pattern = vim.fn.expand("<cword>") })
+end, { desc = "grep word" })
+map("n", "<leader>fc", function()
+	require("mini.extra").pickers.commands()
+end, { desc = "commands" })
+map("n", "<leader>fk", function()
+	require("mini.extra").pickers.keymaps()
+end, { desc = "keymaps" })
+map("n", "<leader>fm", function()
+	require("mini.extra").pickers.marks()
+end, { desc = "marks" })
+map("n", "<leader>f'", function()
+	require("mini.extra").pickers.registers()
+end, { desc = "registers" })
+map("n", "<leader>fd", function()
+	require("mini.extra").pickers.diagnostic()
+end, { desc = "diagnostics" })
+map("n", "<leader>fs", function()
+	require("mini.extra").pickers.lsp({ scope = "document_symbol" })
+end, { desc = "symbols" })
+map("n", "<leader>fS", function()
+	require("mini.extra").pickers.lsp({ scope = "workspace_symbol" })
+end, { desc = "workspace symbols" })
 
 -- quit and save
 map("n", "<leader>jj", vim.cmd.quit, { desc = "quit" })

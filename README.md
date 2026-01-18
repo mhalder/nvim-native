@@ -38,15 +38,27 @@ Leader: `Space` | Local Leader: `\`
 
 ### Find (`<leader>f`)
 
-| Key  | Action        |
-| ---- | ------------- |
-| `ff` | Files         |
-| `fg` | Grep          |
-| `fb` | Buffers       |
-| `fh` | Help          |
-| `fn` | Notifications |
+| Key  | Action            |
+| ---- | ----------------- |
+| `ff` | Files             |
+| `fg` | Grep              |
+| `fb` | Buffers           |
+| `fh` | Help              |
+| `fn` | Notifications     |
+| `fr` | Resume picker     |
+| `fo` | Old files         |
+| `f/` | Buffer lines      |
+| `fw` | Grep word         |
+| `fc` | Commands          |
+| `fk` | Keymaps           |
+| `fm` | Marks             |
+| `f'` | Registers         |
+| `fd` | Diagnostics       |
+| `fs` | Document symbols  |
+| `fS` | Workspace symbols |
 
 In grep/files picker, press `<C-o>` to add glob filters (e.g., `*.md`, `src/**`).
+In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### AI (`<leader>a`)
 

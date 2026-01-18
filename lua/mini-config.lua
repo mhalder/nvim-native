@@ -1,5 +1,6 @@
 require("mini.ai").setup()
 require("mini.diff").setup()
+require("mini.extra").setup()
 require("mini.git").setup()
 require("mini.icons").setup()
 local MiniMisc = require("mini.misc")

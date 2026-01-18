@@ -13,7 +13,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
-      "rev": "0ab400d547814b04b39a069208ff7b40ab22dfb5",
+      "rev": "2d7511494245129aa6c2176f9c71cc2bc1360ed9",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "friendly-snippets": {
@@ -41,7 +41,7 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "c9d3bc2df3015d82eabe3d2d88dac1ef5746e9e8",
+      "rev": "4f53281c51ad9384ef790178b9643740fa763979",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nvim-dap": {
@@ -77,7 +77,7 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "8aada0e3940c573e38b417a226b43bc8675f8958",
+      "rev": "d9a5fb8484374e8ed5d88dd9e0475a760c168d6a",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "quicker.nvim": {
