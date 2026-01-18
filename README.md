@@ -88,10 +88,12 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### Code (`<leader>c`)
 
-| Key  | Action            |
-| ---- | ----------------- |
-| `cf` | Format buffer     |
-| `cF` | Toggle autoformat |
+| Key  | Action             |
+| ---- | ------------------ |
+| `cf` | Format buffer      |
+| `ct` | Toggle autoformat  |
+| `cc` | Format git changed |
+| `cs` | Format git staged  |
 
 ### Trouble (`<leader>x`)
 
