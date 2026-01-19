@@ -29,6 +29,7 @@ Plugins install automatically on first launch.
 **Completion** - blink.cmp with LuaSnip snippets
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Navigation** - mini.files explorer, mini.pick fuzzy finder, tmux integration
+**Notes** - Obsidian vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
 
@@ -199,6 +200,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 ```
 ~/.config/nvim/
 ├── init.lua
+├── .stylua.toml
 ├── selene.toml
 ├── vim.yml
 └── lua/
@@ -212,6 +214,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
     ├── lsp-config.lua
     ├── luasnip-config.lua
     ├── mini-config.lua
+    ├── obsidian-config.lua
     ├── options.lua
     ├── plugins.lua
     ├── quicker-config.lua
@@ -243,6 +246,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | nvim-dap-virtual-text     | DAP inline values                                                                                                                       |
 | nvim-nio                  | Async library                                                                                                                           |
 | nvim-lint                 | Async linting                                                                                                                           |
+| obsidian.nvim             | Obsidian vault integration                                                                                                              |
 | nvim-lspconfig            | LSP                                                                                                                                     |
 | nvim-treesitter           | Syntax                                                                                                                                  |
 | quicker.nvim              | Quickfix enhancement                                                                                                                    |

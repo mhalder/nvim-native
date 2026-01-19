@@ -12,6 +12,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.cursorline = true
 vim.o.signcolumn = "yes"
+vim.o.conceallevel = 2
 vim.o.clipboard = "unnamedplus"
 vim.o.completeopt = "menuone,noselect,fuzzy,nosort"
 
