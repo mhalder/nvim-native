@@ -196,3 +196,14 @@ map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { des
 map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "symbols" })
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
+
+-- buffer commands
+map("n", "<leader>co", "<cmd>BufOnly<cr>", { desc = "close other buffers" })
+vim.api.nvim_create_user_command("BufOnly", function()
+  local cur = vim.api.nvim_get_current_buf()
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if buf ~= cur and vim.bo[buf].buflisted then
+      vim.api.nvim_buf_delete(buf, { force = false })
+    end
+  end
+end, { desc = "Delete all buffers except current" })

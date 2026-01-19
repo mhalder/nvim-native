@@ -89,12 +89,13 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### Code (`<leader>c`)
 
-| Key  | Action             |
-| ---- | ------------------ |
-| `cf` | Format buffer      |
-| `ct` | Toggle autoformat  |
-| `cc` | Format git changed |
-| `cs` | Format git staged  |
+| Key  | Action               |
+| ---- | -------------------- |
+| `cf` | Format buffer        |
+| `ct` | Toggle autoformat    |
+| `cc` | Format git changed   |
+| `cs` | Format git staged    |
+| `co` | Close other buffers  |
 
 ### Trouble (`<leader>x`)
 
@@ -117,9 +118,10 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### Window (`<leader>w`)
 
-| Key  | Action      |
-| ---- | ----------- |
-| `wz` | Zoom toggle |
+| Key  | Action          |
+| ---- | --------------- |
+| `wz` | Zoom toggle     |
+| `wm` | Message history |
 
 ### Git
 
@@ -130,6 +132,23 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `[h`   | Previous hunk |
 | `]h`   | Next hunk     |
 | `:Git` | Git commands  |
+
+### Obsidian (`<leader>o`)
+
+| Key  | Action              |
+| ---- | ------------------- |
+| `oO` | Open Obsidian app   |
+| `oo` | Open note           |
+| `on` | New note            |
+| `od` | Daily note          |
+| `oy` | Yesterday           |
+| `ot` | Tomorrow            |
+| `os` | Search              |
+| `ob` | Backlinks           |
+| `og` | Tags                |
+| `ol` | Link (visual: link) |
+| `oc` | Toggle checkbox     |
+| `oe` | Extract to note (v) |
 
 ### Other
 
