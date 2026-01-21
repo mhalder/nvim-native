@@ -93,6 +93,7 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | ---- | -------------------- |
 | `cf` | Format buffer        |
 | `ct` | Toggle autoformat    |
+| `cT` | Toggle conceal       |
 | `cc` | Format git changed   |
 | `cs` | Format git staged    |
 | `co` | Close other buffers  |

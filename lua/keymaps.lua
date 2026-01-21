@@ -159,6 +159,11 @@ map("n", "<leader>ct", function()
   local state = vim.g.disable_autoformat and "disabled" or "enabled"
   vim.notify("Autoformat " .. state)
 end, { desc = "toggle autoformat" })
+map("n", "<leader>cT", function()
+  local current = vim.o.conceallevel
+  vim.o.conceallevel = current == 0 and 2 or 0
+  vim.notify("Conceal " .. (vim.o.conceallevel == 0 and "off" or "on"))
+end, { desc = "toggle conceal" })
 map("n", "<leader>cc", "<cmd>FormatChanged<cr>", { desc = "format git changed" })
 map("n", "<leader>cs", "<cmd>FormatChanged staged<cr>", { desc = "format git staged" })
 
