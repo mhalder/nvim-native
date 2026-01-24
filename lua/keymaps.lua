@@ -150,6 +150,11 @@ map("n", "-", function()
   require("mini.files").open(vim.api.nvim_buf_get_name(0))
 end, { desc = "open parent directory" })
 
+-- yazi
+map("n", "<leader>-", function()
+  require("yazi").yazi()
+end, { desc = "yazi file manager" })
+
 -- format
 map({ "n", "v" }, "<leader>cf", function()
   require("conform").format({ async = true })

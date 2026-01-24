@@ -5,7 +5,7 @@
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
     "blink.cmp": {
-      "rev": "820f1ddf634ec267412e403711bf74be26cac677",
+      "rev": "b137f63d89d0285ca76eed12e1923220e0aff8c1",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "conform.nvim": {
@@ -17,7 +17,7 @@
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "friendly-snippets": {
-      "rev": "572f5660cf05f8cd8834e096d7b4c921ba18e175",
+      "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "lazydev.nvim": {
@@ -29,11 +29,11 @@
       "src": "https://github.com/iamcco/markdown-preview.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "80c0130c5f16b551865a69e832f1feadeedb5fbe",
+      "rev": "4823a251e7578a835bb979c37df390fca692ba39",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason-tool-installer.nvim": {
-      "rev": "517ef5994ef9d6b738322664d5fdd948f0fdeb46",
+      "rev": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc",
       "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
     },
     "mason.nvim": {
@@ -41,7 +41,7 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "c163117900c17d4abf30bc09452a261c8536060c",
+      "rev": "9b935c218ddba02e5dc75c94f90143bce1f7c646",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nvim-dap": {
@@ -69,7 +69,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-lspconfig": {
-      "rev": "92ee7d42320edfbb81f3cad851314ab197fa324a",
+      "rev": "419b082102fa813739588dd82e19a8b6b2442855",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -77,12 +77,16 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "ec034813775d7e2974c7551c8c34499a828963f8",
+      "rev": "b67d29ce748c3c488485a4733e16acda0ec8d09e",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "obsidian.nvim": {
       "rev": "acd73830fe2e8a2e0c234073ca2cb6387d59f37b",
       "src": "https://github.com/obsidian-nvim/obsidian.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "quicker.nvim": {
       "rev": "fc041830fa7cf093786b0d5990d99cf3c7b0c129",
@@ -103,6 +107,10 @@
     "vim-tmux-navigator": {
       "rev": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a",
       "src": "https://github.com/christoomey/vim-tmux-navigator"
+    },
+    "yazi.nvim": {
+      "rev": "407b4aca14ad4c16f2e8298ae5fab0c0121bf04a",
+      "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
 }

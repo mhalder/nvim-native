@@ -9,6 +9,7 @@ A minimal Neovim 0.12+ configuration using native `vim.pack` for plugin manageme
 - Rust nightly via [rustup](https://rustup.rs/) (builds blink.cmp)
 - Node.js (markdown-preview.nvim)
 - [uv](https://github.com/astral-sh/uv) (Python debugging)
+- [yazi](https://yazi-rs.github.io/) (terminal file manager)
 
 ## Installation
 
@@ -28,7 +29,7 @@ Plugins install automatically on first launch.
 **Linting** - Async linting via nvim-lint (selene, eslint_d, shellcheck, golangci-lint)
 **Completion** - blink.cmp with LuaSnip snippets
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
-**Navigation** - mini.files explorer, mini.pick fuzzy finder, tmux integration
+**Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, tmux integration
 **Notes** - Obsidian vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
@@ -89,14 +90,14 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### Code (`<leader>c`)
 
-| Key  | Action               |
-| ---- | -------------------- |
-| `cf` | Format buffer        |
-| `ct` | Toggle autoformat    |
-| `cT` | Toggle conceal       |
-| `cc` | Format git changed   |
-| `cs` | Format git staged    |
-| `co` | Close other buffers  |
+| Key  | Action              |
+| ---- | ------------------- |
+| `cf` | Format buffer       |
+| `ct` | Toggle autoformat   |
+| `cT` | Toggle conceal      |
+| `cc` | Format git changed  |
+| `cs` | Format git staged   |
+| `co` | Close other buffers |
 
 ### Trouble (`<leader>x`)
 
@@ -153,12 +154,13 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### Other
 
-| Key       | Action                      |
-| --------- | --------------------------- |
-| `Esc`     | Clear search highlight      |
-| `-`       | Open mini.files (parent)    |
-| `<` / `>` | Indent (visual, repeatable) |
-| `C-x`     | Exit terminal mode          |
+| Key         | Action                      |
+| ----------- | --------------------------- |
+| `Esc`       | Clear search highlight      |
+| `-`         | Open mini.files (parent)    |
+| `<leader>-` | Open yazi file manager      |
+| `<` / `>`   | Indent (visual, repeatable) |
+| `C-x`       | Exit terminal mode          |
 
 ### Text Objects (mini.ai)
 
@@ -241,7 +243,8 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
     ├── sidekick-config.lua
     ├── theme.lua
     ├── treesitter-config.lua
-    └── trouble-config.lua
+    ├── trouble-config.lua
+    └── yazi-config.lua
 ```
 
 ## Plugins
@@ -274,6 +277,8 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | tokyonight.nvim           | Theme                                                                                                                                   |
 | trouble.nvim              | Diagnostics list                                                                                                                        |
 | vim-tmux-navigator        | Tmux integration                                                                                                                        |
+| plenary.nvim              | Lua utility library                                                                                                                     |
+| yazi.nvim                 | Yazi file manager integration                                                                                                           |
 
 ## License
 

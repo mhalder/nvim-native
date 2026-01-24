@@ -19,6 +19,7 @@ require("quicker-config")
 require("mini-config")
 require("sidekick-config")
 require("obsidian-config")
+require("yazi-config")
 
 -- user setup
 require("options")
