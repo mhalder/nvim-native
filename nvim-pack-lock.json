@@ -77,11 +77,11 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "b67d29ce748c3c488485a4733e16acda0ec8d09e",
+      "rev": "568ede7e79172a0fe7c9d631454a97ad968deaf2",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "obsidian.nvim": {
-      "rev": "acd73830fe2e8a2e0c234073ca2cb6387d59f37b",
+      "rev": "844b95b7770a7792c5081245d73b476bda18a5e4",
       "src": "https://github.com/obsidian-nvim/obsidian.nvim"
     },
     "plenary.nvim": {
@@ -109,7 +109,7 @@
       "src": "https://github.com/christoomey/vim-tmux-navigator"
     },
     "yazi.nvim": {
-      "rev": "407b4aca14ad4c16f2e8298ae5fab0c0121bf04a",
+      "rev": "e63edf5c90aaed0b6b13320958c5302f97a6cc95",
       "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }

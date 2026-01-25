@@ -1,8 +1,15 @@
 require("sidekick").setup({
   cli = {
     win = {
-      layout = "right",
-      split = { width = 80 },
+      layout = "float",
+      float = {
+        width = 0.9,
+        height = 0.9,
+      },
+    },
+    mux = {
+      backend = "tmux",
+      enabled = true,
     },
   },
 })

@@ -77,3 +77,19 @@ autocmd("FileType", {
     vim.cmd.packadd("markdown-preview.nvim")
   end,
 })
+
+-- silently reload files changed outside of Neovim
+autocmd("FileChangedShell", {
+  desc = "Silently reload files changed externally",
+  group = group,
+  callback = function()
+    vim.v.fcs_choice = "reload"
+  end,
+})
+
+-- check for file changes when gaining focus or entering a buffer
+autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+  desc = "Check for file changes",
+  group = group,
+  command = "silent! checktime",
+})

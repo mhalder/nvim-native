@@ -20,6 +20,7 @@ vim.o.updatetime = 300
 vim.o.timeoutlen = 500
 vim.o.confirm = true
 vim.o.exrc = true
+vim.o.autoread = true
 vim.o.smoothscroll = true
 
 vim.o.jumpoptions = "stack"
