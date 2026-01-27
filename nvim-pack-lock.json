@@ -4,6 +4,10 @@
       "rev": "dae4f5aaa3574bd0c2b9dd20fb9542a02c10471c",
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
+    "blink-copilot": {
+      "rev": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39",
+      "src": "https://github.com/fang2hou/blink-copilot"
+    },
     "blink.cmp": {
       "rev": "b137f63d89d0285ca76eed12e1923220e0aff8c1",
       "src": "https://github.com/saghen/blink.cmp"
@@ -13,7 +17,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
-      "rev": "2d7511494245129aa6c2176f9c71cc2bc1360ed9",
+      "rev": "2ede0808fa8dace39ea2a0f09b7bc6583655b730",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
     "friendly-snippets": {
@@ -69,7 +73,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-lspconfig": {
-      "rev": "419b082102fa813739588dd82e19a8b6b2442855",
+      "rev": "54baa4beeeabed24be24379d5b3ce402fe7b5208",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -105,11 +109,11 @@
       "src": "https://github.com/folke/trouble.nvim"
     },
     "vim-tmux-navigator": {
-      "rev": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a",
+      "rev": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432",
       "src": "https://github.com/christoomey/vim-tmux-navigator"
     },
     "yazi.nvim": {
-      "rev": "e63edf5c90aaed0b6b13320958c5302f97a6cc95",
+      "rev": "8992f08270a008ab7638ccfb0cf07bb6e9e69f5e",
       "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }

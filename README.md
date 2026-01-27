@@ -27,7 +27,7 @@ Plugins install automatically on first launch.
 **Treesitter** - Syntax highlighting for Lua, Python, Rust, TypeScript, JavaScript, Go, Bash, JSON, YAML, Markdown, HTML, CSS
 **Formatting** - Format on save via conform.nvim (stylua, ruff, prettierd, shfmt, goimports, rustfmt)
 **Linting** - Async linting via nvim-lint (selene, eslint_d, shellcheck, golangci-lint)
-**Completion** - blink.cmp with LuaSnip snippets
+**Completion** - blink.cmp with LuaSnip snippets and Copilot suggestions
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, tmux integration
 **Notes** - Obsidian vault integration with wiki links, daily notes, and templates
@@ -64,14 +64,13 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### AI (`<leader>a`)
 
-| Key   | Action            |
-| ----- | ----------------- |
-| `aa`  | Toggle Sidekick   |
-| `ac`  | Toggle Claude     |
-| `as`  | Select CLI        |
-| `ap`  | Prompt            |
-| `Tab` | Accept suggestion |
-| `C-.` | Focus Sidekick    |
+| Key   | Action          |
+| ----- | --------------- |
+| `aa`  | Toggle Sidekick |
+| `ac`  | Toggle Claude   |
+| `as`  | Select CLI      |
+| `ap`  | Prompt          |
+| `C-.` | Focus Sidekick  |
 
 ### Debug (`<leader>d`)
 
@@ -252,8 +251,9 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | Plugin                    | Purpose                                                                                                                                 |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | blink.cmp                 | Completion                                                                                                                              |
+| blink-copilot             | Copilot source for blink.cmp                                                                                                            |
 | conform.nvim              | Formatting                                                                                                                              |
-| copilot.lua               | GitHub Copilot                                                                                                                          |
+| copilot.lua               | GitHub Copilot LSP                                                                                                                      |
 | friendly-snippets         | Snippet collection                                                                                                                      |
 | lazydev.nvim              | Lua dev support                                                                                                                         |
 | LuaSnip                   | Snippet engine                                                                                                                          |

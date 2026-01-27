@@ -15,6 +15,7 @@ vim.pack.add({
   { src = "https://github.com/saghen/blink.cmp" },
   { src = "https://github.com/stevearc/conform.nvim" },
   { src = "https://github.com/zbirenbaum/copilot.lua" },
+  { src = "https://github.com/fang2hou/blink-copilot" },
   { src = "https://github.com/rafamadriz/friendly-snippets" },
   { src = "https://github.com/folke/lazydev.nvim" },
   { src = "https://github.com/L3MON4D3/LuaSnip" },
