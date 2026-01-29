@@ -1,4 +1,3 @@
----@type conform.FiletypeFormatter
 local prettier = { [1] = "prettierd", [2] = "prettier", stop_after_first = true }
 
 require("conform").setup({

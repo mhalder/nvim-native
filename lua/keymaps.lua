@@ -51,6 +51,9 @@ map("n", "<leader>fn", function()
       items = vim.tbl_map(function(item)
         return item.text
       end, items),
+      choose = function(item)
+        vim.fn.setreg("+", item)
+      end,
     },
   })
 end, { desc = "notifications" })

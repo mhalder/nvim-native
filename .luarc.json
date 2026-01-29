@@ -1,0 +1,12 @@
+{
+  "runtime": {
+    "version": "LuaJIT"
+  },
+  "diagnostics": {
+    "globals": ["vim", "MiniMisc", "MiniNotify"],
+    "disable": ["undefined-field"]
+  },
+  "workspace": {
+    "checkThirdParty": false
+  }
+}

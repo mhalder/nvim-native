@@ -6,13 +6,29 @@ require("obsidian").setup({
     },
   },
 
-  notes_subdir = "notes",
+  -- Match Obsidian app: new files go to 00-inbox
+  notes_subdir = "00-inbox",
   new_notes_location = "notes_subdir",
 
+  -- Note ID: timestamp-slug format matching vault convention
+  note_id_func = function(title)
+    local suffix = ""
+    if title ~= nil then
+      suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+    else
+      for _ = 1, 4 do
+        suffix = suffix .. string.char(math.random(65, 90))
+      end
+    end
+    return tostring(os.time()) .. "-" .. suffix
+  end,
+
+  -- Daily notes: match Obsidian app config (10-daily folder)
   daily_notes = {
-    folder = "daily",
+    folder = "10-daily",
     date_format = "%Y-%m-%d",
     alias_format = "%B %-d, %Y",
+    template = "daily.md",
     default_tags = { "daily" },
   },
 
@@ -20,6 +36,33 @@ require("obsidian").setup({
     folder = "templates",
     date_format = "%Y-%m-%d",
     time_format = "%H:%M",
+    substitutions = {
+      yesterday = function()
+        return os.date("%Y-%m-%d", os.time() - 86400)
+      end,
+      tomorrow = function()
+        return os.date("%Y-%m-%d", os.time() + 86400)
+      end,
+    },
+  },
+
+  -- Frontmatter: preserve vault schema (id, type, tags, created)
+  frontmatter = {
+    enabled = true,
+    func = function(note)
+      local out = {
+        id = note.id,
+        aliases = note.aliases,
+        tags = note.tags,
+      }
+      -- Preserve any extra metadata (type, status, created, etc.)
+      if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+        for k, v in pairs(note.metadata) do
+          out[k] = v
+        end
+      end
+      return out
+    end,
   },
 
   completion = {
@@ -36,8 +79,38 @@ require("obsidian").setup({
     },
   },
 
+  -- Keymaps set via callbacks (mappings config is deprecated)
+  callbacks = {
+    ---@diagnostic disable-next-line: unused-local
+    enter_note = function(_note)
+      vim.keymap.set("n", "gf", function()
+        return require("obsidian").util.gf_passthrough()
+      end, { noremap = false, expr = true, buffer = true })
+      vim.keymap.set("n", "<leader>ch", "<cmd>Obsidian toggle_checkbox<cr>", {
+        buffer = true,
+        desc = "Toggle checkbox",
+      })
+      vim.keymap.set("n", "<cr>", function()
+        return require("obsidian").util.smart_action()
+      end, { buffer = true, expr = true })
+    end,
+  },
+
   preferred_link_style = "wiki",
   legacy_commands = false,
+
+  -- Attachments: match Obsidian app config
+  attachments = {
+    folder = "attachments",
+    img_name_func = function()
+      return string.format("pasted-%s", os.date("%Y%m%d%H%M%S"))
+    end,
+    ---@diagnostic disable-next-line: unused-local
+    img_text_func = function(_client, path)
+      return string.format("![[%s]]", path.name)
+    end,
+    confirm_img_paste = false,
+  },
 
   ui = {
     enable = true,

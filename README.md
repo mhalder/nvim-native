@@ -221,6 +221,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 ```
 ~/.config/nvim/
 ├── init.lua
+├── .luarc.json
 ├── .stylua.toml
 ├── selene.toml
 ├── vim.yml
