@@ -73,7 +73,7 @@
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-lspconfig": {
-      "rev": "5fef3b4a5f1057553b78d048322782c3a9ae69c6",
+      "rev": "79c9a15be5731bc8694840a8fb0c9141c20a80c0",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -81,11 +81,11 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "f8bbc3177d929dc86e272c41cc15219f0a7aa1ac",
+      "rev": "19c729dae6e0eeb79423df0cf37780aa9a7cc3b7",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "obsidian.nvim": {
-      "rev": "35dacac22117e6f6025b89c3aa4b6c152ab0d2c5",
+      "rev": "dacdbd8b08862ddbb8e9d384ddba6c428aef4428",
       "src": "https://github.com/obsidian-nvim/obsidian.nvim"
     },
     "plenary.nvim": {
@@ -113,9 +113,8 @@
       "src": "https://github.com/christoomey/vim-tmux-navigator"
     },
     "yazi.nvim": {
-      "rev": "9bbe1b18a6ee24d791ae9937e64c8526b80e8ffa",
+      "rev": "015e73f47424e95d4456ff2880f13d106dab3a5d",
       "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
 }
-
