@@ -149,6 +149,7 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `ob` | Backlinks           |
 | `og` | Tags                |
 | `ol` | Link (visual: link) |
+| `oT` | New from template   |
 | `oc` | Toggle checkbox     |
 | `oe` | Extract to note (v) |
 

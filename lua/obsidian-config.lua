@@ -43,6 +43,25 @@ require("obsidian").setup({
       tomorrow = function()
         return os.date("%Y-%m-%d", os.time() + 86400)
       end,
+      -- Obsidian app Moment.js date/time formats
+      ["date:YYYY-MM-DD"] = function()
+        return os.date("%Y-%m-%d")
+      end,
+      ["date:YYYYMMDDHHmm"] = function()
+        return os.date("%Y%m%d%H%M")
+      end,
+      ["date:YYYY-MM-DD, dddd"] = function()
+        return os.date("%Y-%m-%d, %A")
+      end,
+      ["time:HH:mm"] = function()
+        return os.date("%H:%M")
+      end,
+      ["date-1d:YYYY-MM-DD"] = function()
+        return os.date("%Y-%m-%d", os.time() - 86400)
+      end,
+      ["date+1d:YYYY-MM-DD"] = function()
+        return os.date("%Y-%m-%d", os.time() + 86400)
+      end,
     },
   },
 
