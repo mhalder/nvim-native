@@ -210,6 +210,10 @@ map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
 
+-- buffer navigation
+map("n", "<C-Left>", "<cmd>bprevious<CR>", { desc = "previous buffer" })
+map("n", "<C-Right>", "<cmd>bnext<CR>", { desc = "next buffer" })
+
 -- buffer commands
 map("n", "<leader>co", "<cmd>BufOnly<cr>", { desc = "close other buffers" })
 vim.api.nvim_create_user_command("BufOnly", function()

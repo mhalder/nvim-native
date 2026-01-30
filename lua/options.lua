@@ -35,3 +35,24 @@ vim.o.smartcase = true
 vim.opt.diffopt:append("algorithm:histogram,linematch:60")
 
 vim.diagnostic.config({ virtual_text = true })
+
+-- Native buffer tabline
+vim.o.showtabline = 2
+function _G.bufline()
+  local bufs = {}
+  local cur = vim.api.nvim_get_current_buf()
+  for _, b in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.bo[b].buflisted then
+      local name = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(b), ":t")
+      if name == "" then name = "[No Name]" end
+      local modified = vim.bo[b].modified and " +" or ""
+      if b == cur then
+        table.insert(bufs, "%#TabLineSel# " .. name .. modified .. " ")
+      else
+        table.insert(bufs, "%#TabLine# " .. name .. modified .. " ")
+      end
+    end
+  end
+  return table.concat(bufs) .. "%#TabLineFill#"
+end
+vim.o.tabline = "%!v:lua.bufline()"

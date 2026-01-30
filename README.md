@@ -29,6 +29,7 @@ Plugins install automatically on first launch.
 **Linting** - Async linting via nvim-lint (selene, eslint_d, shellcheck, golangci-lint)
 **Completion** - blink.cmp with LuaSnip snippets and Copilot suggestions
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
+**Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
 **Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, tmux integration
 **Notes** - Obsidian vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff)
@@ -159,6 +160,8 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `-`         | Open mini.files (parent)    |
 | `<leader>-` | Open yazi file manager      |
 | `<` / `>`   | Indent (visual, repeatable) |
+| `C-Left`    | Previous buffer             |
+| `C-Right`   | Next buffer                 |
 | `C-x`       | Exit terminal mode          |
 
 ### Text Objects (mini.ai)
