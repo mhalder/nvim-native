@@ -2,7 +2,11 @@ require("obsidian").setup({
   workspaces = {
     {
       name = "terminus",
-      path = "~/terminus",
+      path = "~/vaults/terminus",
+    },
+    {
+      name = "trantor",
+      path = "~/vaults/trantor",
     },
   },
 

@@ -188,9 +188,11 @@ end, { desc = "message history" })
 
 -- obsidian
 map("n", "<leader>oO", function()
-  vim.fn.jobstart({ "obsidian", "obsidian://open?vault=terminus" }, { detach = true })
+  local vault = Obsidian.workspace.name
+  vim.fn.jobstart({ "obsidian", "obsidian://open?vault=" .. vault }, { detach = true })
 end, { desc = "open Obsidian app" })
 map("n", "<leader>oo", "<cmd>Obsidian quick_switch<cr>", { desc = "open note" })
+map("n", "<leader>ov", "<cmd>Obsidian workspace<cr>", { desc = "switch vault" })
 map("n", "<leader>on", "<cmd>Obsidian new<cr>", { desc = "new note" })
 map("n", "<leader>od", "<cmd>Obsidian today<cr>", { desc = "daily note" })
 map("n", "<leader>oy", "<cmd>Obsidian yesterday<cr>", { desc = "yesterday" })

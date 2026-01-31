@@ -31,7 +31,7 @@ Plugins install automatically on first launch.
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
 **Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, tmux integration
-**Notes** - Obsidian vault integration with wiki links, daily notes, and templates
+**Notes** - Obsidian multi-vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
 
@@ -141,6 +141,7 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | ---- | ------------------- |
 | `oO` | Open Obsidian app   |
 | `oo` | Open note           |
+| `ov` | Switch vault        |
 | `on` | New note            |
 | `od` | Daily note          |
 | `oy` | Yesterday           |
