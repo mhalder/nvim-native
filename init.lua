@@ -20,6 +20,7 @@ require("mini-config")
 require("sidekick-config")
 require("obsidian-config")
 require("yazi-config")
+require("flash-config")
 
 -- user setup
 require("options")

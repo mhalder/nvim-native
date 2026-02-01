@@ -30,7 +30,7 @@ Plugins install automatically on first launch.
 **Completion** - blink.cmp with LuaSnip snippets and Copilot suggestions
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
-**Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, tmux integration
+**Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, flash.nvim motions, tmux integration
 **Notes** - Obsidian multi-vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
@@ -154,6 +154,18 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `oc` | Toggle checkbox     |
 | `oe` | Extract to note (v) |
 
+### Flash
+
+| Key     | Mode  | Action                 |
+| ------- | ----- | ---------------------- |
+| `<CR>`  | n,x,o | Jump to match          |
+| `gS`    | n,x,o | Treesitter select      |
+| `r`     | o     | Remote flash           |
+| `R`     | o,x   | Treesitter search      |
+| `<C-s>` | c     | Toggle flash in search |
+
+Enhanced `f`/`t` motions show jump labels automatically.
+
 ### Other
 
 | Key         | Action                      |
@@ -236,6 +248,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
     ├── conform-config.lua
     ├── copilot-config.lua
     ├── debugging-config.lua
+    ├── flash-config.lua
     ├── keymaps.lua
     ├── lint-config.lua
     ├── lsp-config.lua
@@ -260,6 +273,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | blink-copilot             | Copilot source for blink.cmp                                                                                                            |
 | conform.nvim              | Formatting                                                                                                                              |
 | copilot.lua               | GitHub Copilot LSP                                                                                                                      |
+| flash.nvim                | Motion jump with labels                                                                                                                 |
 | friendly-snippets         | Snippet collection                                                                                                                      |
 | lazydev.nvim              | Lua dev support                                                                                                                         |
 | LuaSnip                   | Snippet engine                                                                                                                          |
