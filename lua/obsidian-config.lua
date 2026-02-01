@@ -114,8 +114,10 @@ require("obsidian").setup({
         desc = "Toggle checkbox",
       })
       vim.keymap.set("n", "<cr>", function()
+        vim.cmd("delmarks < >")
         return require("obsidian").util.smart_action()
       end, { buffer = true, expr = true })
+      vim.keymap.set("v", "<cr>", ":Obsidian toggle_checkbox<cr>gv", { buffer = true })
     end,
   },
 
