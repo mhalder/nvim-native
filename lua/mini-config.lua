@@ -37,7 +37,17 @@ require("mini.pick").setup({
     end,
   },
 })
-require("mini.surround").setup()
+require("mini.surround").setup({
+  mappings = {
+    add = "gz",
+    delete = "gzd",
+    find = "gzf",
+    find_left = "gzF",
+    highlight = "gzh",
+    replace = "gzr",
+    update_n_lines = "gzn",
+  },
+})
 
 local miniclue = require("mini.clue")
 miniclue.setup({
@@ -47,8 +57,8 @@ miniclue.setup({
     { mode = "i", keys = "<C-x>" },
     { mode = "n", keys = "g" },
     { mode = "x", keys = "g" },
-    { mode = "n", keys = "s" },
-    { mode = "x", keys = "s" },
+    { mode = "n", keys = "gz" },
+    { mode = "x", keys = "gz" },
     { mode = "n", keys = "'" },
     { mode = "n", keys = "`" },
     { mode = "x", keys = "'" },

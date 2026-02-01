@@ -158,7 +158,7 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 | Key     | Mode  | Action                 |
 | ------- | ----- | ---------------------- |
-| `<CR>`  | n,x,o | Jump to match          |
+| `s`     | n,x,o | Jump to match          |
 | `gS`    | n,x,o | Treesitter select      |
 | `r`     | o     | Remote flash           |
 | `R`     | o,x   | Treesitter search      |
@@ -200,14 +200,14 @@ Use `2i(` or `2a(` to select the next/outer match.
 
 ### Surround (mini.surround)
 
-| Key  | Action                |
-| ---- | --------------------- |
-| `sa` | Add surrounding       |
-| `sd` | Delete surrounding    |
-| `sr` | Replace surrounding   |
-| `sf` | Find surrounding      |
-| `sF` | Find left             |
-| `sh` | Highlight surrounding |
+| Key   | Action                |
+| ----- | --------------------- |
+| `gz`  | Add surrounding       |
+| `gzd` | Delete surrounding    |
+| `gzr` | Replace surrounding   |
+| `gzf` | Find surrounding      |
+| `gzF` | Find left             |
+| `gzh` | Highlight surrounding |
 
 ### Bracket Navigation (mini.bracketed)
 
