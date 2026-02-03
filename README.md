@@ -6,7 +6,7 @@ A minimal Neovim 0.12+ configuration using native `vim.pack` for plugin manageme
 
 - Neovim 0.12+
 - Git
-- Rust nightly via [rustup](https://rustup.rs/) (builds blink.cmp)
+- Rust via [rustup](https://rustup.rs/) (builds blink.cmp)
 - Node.js (markdown-preview.nvim)
 - [uv](https://github.com/astral-sh/uv) (Python debugging)
 - [yazi](https://yazi-rs.github.io/) (terminal file manager)
