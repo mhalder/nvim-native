@@ -7,12 +7,13 @@ require("blink.cmp").setup({
     ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
   },
   sources = {
-    default = { "copilot", "lsp", "path", "snippets", "buffer", "obsidian", "obsidian_new", "obsidian_tags" },
+    default = { "obsidian", "obsidian_new", "obsidian_tags", "copilot", "lsp", "path", "snippets", "buffer" },
     providers = {
       copilot = {
         name = "copilot",
         module = "blink-copilot",
         async = true,
+        score_offset = -1,
         transform_items = function(_, items)
           for _, item in ipairs(items) do
             item.kind_icon = ""

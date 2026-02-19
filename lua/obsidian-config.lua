@@ -8,6 +8,10 @@ require("obsidian").setup({
       name = "trantor",
       path = "~/vaults/trantor",
     },
+    {
+      name = "new-terminus",
+      path = "~/vaults/new-terminus",
+    },
   },
 
   -- Match Obsidian app: new files go to 00-inbox
@@ -72,20 +76,6 @@ require("obsidian").setup({
   -- Frontmatter: preserve vault schema (id, type, tags, created)
   frontmatter = {
     enabled = true,
-    func = function(note)
-      local out = {
-        id = note.id,
-        aliases = note.aliases,
-        tags = note.tags,
-      }
-      -- Preserve any extra metadata (type, status, created, etc.)
-      if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-        for k, v in pairs(note.metadata) do
-          out[k] = v
-        end
-      end
-      return out
-    end,
   },
 
   completion = {
@@ -106,9 +96,7 @@ require("obsidian").setup({
   callbacks = {
     ---@diagnostic disable-next-line: unused-local
     enter_note = function(_note)
-      vim.keymap.set("n", "gf", function()
-        return require("obsidian").util.gf_passthrough()
-      end, { noremap = false, expr = true, buffer = true })
+      vim.keymap.set("n", "gf", "<cmd>Obsidian follow_link<cr>", { buffer = true, desc = "Follow link" })
       vim.keymap.set("n", "<leader>ch", "<cmd>Obsidian toggle_checkbox<cr>", {
         buffer = true,
         desc = "Toggle checkbox",
@@ -122,6 +110,7 @@ require("obsidian").setup({
   },
 
   preferred_link_style = "wiki",
+  wiki_link_func = "use_alias_only",
   legacy_commands = false,
 
   -- Attachments: match Obsidian app config
@@ -139,6 +128,12 @@ require("obsidian").setup({
 
   ui = {
     enable = true,
+  },
+
+  footer = {
+    enabled = true,
+    format = "{{backlinks}} backlinks  {{words}} words",
+    hl_group = "Comment",
   },
 
   checkbox = {

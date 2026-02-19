@@ -3,7 +3,7 @@ vim.api.nvim_create_autocmd("PackChanged", {
   callback = function(ev)
     local name, kind = ev.data.spec.name, ev.data.kind
     if name == "blink.cmp" and (kind == "install" or kind == "update") then
-      vim.system({ "cargo", "build", "--release" }, { cwd = ev.data.path }):wait()
+      vim.system({ "cargo", "+nightly-2026-02-18", "build", "--release" }, { cwd = ev.data.path }):wait()
     end
     if name == "markdown-preview.nvim" and (kind == "install" or kind == "update") then
       vim.system({ "npm", "install" }, { cwd = ev.data.path .. "/app" }):wait()
