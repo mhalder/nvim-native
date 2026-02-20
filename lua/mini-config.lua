@@ -76,6 +76,7 @@ miniclue.setup({
   clues = {
     { mode = "n", keys = "<Leader>a", desc = "+sidekick" },
     { mode = "x", keys = "<Leader>a", desc = "+sidekick" },
+    { mode = "n", keys = "<Leader>b", desc = "+buffer" },
     { mode = "n", keys = "<Leader>c", desc = "+code" },
     { mode = "x", keys = "<Leader>c", desc = "+code" },
     { mode = "n", keys = "<Leader>d", desc = "+debugging" },
@@ -83,6 +84,7 @@ miniclue.setup({
     { mode = "n", keys = "<Leader>j", desc = "+quit/save" },
     { mode = "n", keys = "<Leader>o", desc = "+obsidian" },
     { mode = "x", keys = "<Leader>o", desc = "+obsidian" },
+    { mode = "n", keys = "<Leader>t", desc = "+toggle" },
     { mode = "n", keys = "<Leader>w", desc = "+window" },
     { mode = "n", keys = "<Leader>x", desc = "+trouble" },
     { mode = "n", keys = "gh", desc = "apply hunk" },

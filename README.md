@@ -41,24 +41,23 @@ Leader: `Space` | Local Leader: `\`
 
 ### Find (`<leader>f`)
 
-| Key  | Action            |
-| ---- | ----------------- |
-| `ff` | Files             |
-| `fg` | Grep              |
-| `fb` | Buffers           |
-| `fh` | Help              |
-| `fn` | Notifications     |
-| `fr` | Resume picker     |
-| `fo` | Old files         |
-| `f/` | Buffer lines      |
-| `fw` | Grep word         |
-| `fc` | Commands          |
-| `fk` | Keymaps           |
-| `fm` | Marks             |
-| `f'` | Registers         |
-| `fd` | Diagnostics       |
-| `fs` | Document symbols  |
-| `fS` | Workspace symbols |
+| Key                | Action            |
+| ------------------ | ----------------- |
+| `<leader><leader>` | Files             |
+| `fg`               | Grep              |
+| `fh`               | Help              |
+| `fn`               | Notifications     |
+| `fr`               | Resume picker     |
+| `fo`               | Old files         |
+| `f/`               | Buffer lines      |
+| `fw`               | Grep word         |
+| `fc`               | Commands          |
+| `fk`               | Keymaps           |
+| `fm`               | Marks             |
+| `f'`               | Registers         |
+| `fd`               | Diagnostics       |
+| `fs`               | Document symbols  |
+| `fS`               | Workspace symbols |
 
 In grep/files picker, press `<C-o>` to add glob filters (e.g., `*.md`, `src/**`).
 In buffers picker, press `<C-d>` to wipe the selected buffer.
@@ -88,16 +87,28 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `dt` | Terminate              |
 | `dv` | Toggle DAP view        |
 
+### Buffer (`<leader>b`)
+
+| Key  | Action        |
+| ---- | ------------- |
+| `bb` | Buffers       |
+| `bd` | Delete buffer |
+
 ### Code (`<leader>c`)
 
 | Key  | Action              |
 | ---- | ------------------- |
 | `cf` | Format buffer       |
-| `ct` | Toggle autoformat   |
-| `cT` | Toggle conceal      |
 | `cc` | Format git changed  |
 | `cs` | Format git staged   |
 | `co` | Close other buffers |
+
+### Toggle (`<leader>t`)
+
+| Key  | Action            |
+| ---- | ----------------- |
+| `ta` | Toggle autoformat |
+| `tc` | Toggle conceal    |
 
 ### Trouble (`<leader>x`)
 
@@ -172,7 +183,7 @@ Enhanced `f`/`t` motions show jump labels automatically.
 | ----------- | --------------------------- |
 | `Esc`       | Clear search highlight      |
 | `-`         | Open mini.files (parent)    |
-| `<leader>-` | Open yazi file manager      |
+| `<leader>-` | Yazi                        |
 | `<` / `>`   | Indent (visual, repeatable) |
 | `C-Left`    | Previous buffer             |
 | `C-Right`   | Next buffer                 |

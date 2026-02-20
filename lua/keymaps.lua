@@ -8,7 +8,7 @@ map("v", ">", ">gv", { desc = "indent right" })
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "clear search highlight" })
 
 -- mini.pick
-map("n", "<leader>ff", function()
+map("n", "<leader><leader>", function()
   require("mini.pick").builtin.files()
 end, { desc = "find files" })
 map("n", "<leader>fg", function()
@@ -29,7 +29,8 @@ local function pick_buffers()
     mappings = { wipe = { char = "<C-d>", func = wipe_buffer } },
   })
 end
-map("n", "<leader>fb", pick_buffers, { desc = "buffers" })
+map("n", "<leader>bb", pick_buffers, { desc = "buffers" })
+map("n", "<leader>bd", "<cmd>bd<cr>", { desc = "delete buffer" })
 map("n", "<leader>fh", function()
   require("mini.pick").builtin.help()
 end, { desc = "help" })
@@ -156,18 +157,18 @@ end, { desc = "open parent directory" })
 -- yazi
 map("n", "<leader>-", function()
   require("yazi").yazi()
-end, { desc = "yazi file manager" })
+end, { desc = "yazi" })
 
 -- format
 map({ "n", "v" }, "<leader>cf", function()
   require("conform").format({ async = true })
 end, { desc = "format buffer" })
-map("n", "<leader>ct", function()
+map("n", "<leader>ta", function()
   vim.g.disable_autoformat = not vim.g.disable_autoformat
   local state = vim.g.disable_autoformat and "disabled" or "enabled"
   vim.notify("Autoformat " .. state)
 end, { desc = "toggle autoformat" })
-map("n", "<leader>cT", function()
+map("n", "<leader>tc", function()
   local current = vim.o.conceallevel
   vim.o.conceallevel = current == 0 and 2 or 0
   vim.notify("Conceal " .. (vim.o.conceallevel == 0 and "off" or "on"))
