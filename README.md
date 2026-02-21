@@ -89,19 +89,19 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### Buffer (`<leader>b`)
 
-| Key  | Action        |
-| ---- | ------------- |
-| `bb` | Buffers       |
-| `bd` | Delete buffer |
+| Key  | Action              |
+| ---- | ------------------- |
+| `bb` | Buffers             |
+| `bd` | Delete buffer       |
+| `bo` | Close other buffers |
 
 ### Code (`<leader>c`)
 
-| Key  | Action              |
-| ---- | ------------------- |
-| `cf` | Format buffer       |
-| `cc` | Format git changed  |
-| `cs` | Format git staged   |
-| `co` | Close other buffers |
+| Key  | Action             |
+| ---- | ------------------ |
+| `cf` | Format buffer      |
+| `cc` | Format git changed |
+| `cs` | Format git staged  |
 
 ### Toggle (`<leader>t`)
 

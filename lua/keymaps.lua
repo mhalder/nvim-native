@@ -219,7 +219,7 @@ map("n", "<C-Left>", "<cmd>bprevious<CR>", { desc = "previous buffer" })
 map("n", "<C-Right>", "<cmd>bnext<CR>", { desc = "next buffer" })
 
 -- buffer commands
-map("n", "<leader>co", "<cmd>BufOnly<cr>", { desc = "close other buffers" })
+map("n", "<leader>bo", "<cmd>BufOnly<cr>", { desc = "close other buffers" })
 vim.api.nvim_create_user_command("BufOnly", function()
   local cur = vim.api.nvim_get_current_buf()
   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
