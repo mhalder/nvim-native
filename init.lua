@@ -21,6 +21,7 @@ require("sidekick-config")
 require("obsidian-config")
 require("yazi-config")
 require("flash-config")
+require("diffview").setup()
 
 -- user setup
 require("options")

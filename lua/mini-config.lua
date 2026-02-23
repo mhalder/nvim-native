@@ -123,6 +123,7 @@ miniclue.setup({
     { mode = "x", keys = "<Leader>o", desc = "+obsidian" },
     { mode = "n", keys = "<Leader>t", desc = "+toggle" },
     { mode = "n", keys = "<Leader>w", desc = "+window" },
+    { mode = "n", keys = "<Leader>g", desc = "+git" },
     { mode = "n", keys = "<Leader>x", desc = "+trouble" },
     { mode = "n", keys = "gh", desc = "apply hunk" },
     { mode = "x", keys = "gh", desc = "apply hunk" },

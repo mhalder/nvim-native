@@ -214,6 +214,13 @@ map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
 
+-- diffview
+map("n", "<leader>gd", "<cmd>DiffviewOpen<cr>", { desc = "diff working tree" })
+map("n", "<leader>gs", "<cmd>DiffviewOpen --staged<cr>", { desc = "diff staged" })
+map("n", "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", { desc = "file history" })
+map("n", "<leader>gH", "<cmd>DiffviewFileHistory<cr>", { desc = "repo history" })
+map("n", "<leader>gc", "<cmd>DiffviewClose<cr>", { desc = "close diffview" })
+
 -- buffer navigation
 map("n", "<C-Left>", "<cmd>bprevious<CR>", { desc = "previous buffer" })
 map("n", "<C-Right>", "<cmd>bnext<CR>", { desc = "next buffer" })

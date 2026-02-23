@@ -32,7 +32,7 @@ Plugins install automatically on first launch.
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
 **Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, flash.nvim motions, tmux integration
 **Notes** - Obsidian multi-vault integration with wiki links, daily notes, and templates
-**Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff)
+**Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff), side-by-side diff viewer (diffview.nvim)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
 
 ## Key Bindings
@@ -147,7 +147,17 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `wz` | Zoom toggle     |
 | `wm` | Message history |
 
-### Git
+### Git (`<leader>g`)
+
+| Key  | Action            |
+| ---- | ----------------- |
+| `gd` | Diff working tree |
+| `gs` | Diff staged       |
+| `gh` | File history      |
+| `gH` | Repo history      |
+| `gc` | Close diffview    |
+
+### Git (no prefix)
 
 | Key    | Action        |
 | ------ | ------------- |
@@ -329,6 +339,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | quicker.nvim                | Quickfix enhancement                                                                                                                                                        |
 | sidekick.nvim               | AI assistant                                                                                                                                                                |
 | tokyonight.nvim             | Theme                                                                                                                                                                       |
+| diffview.nvim               | Side-by-side git diff viewer                                                                                                                                                |
 | trouble.nvim                | Diagnostics list                                                                                                                                                            |
 | vim-tmux-navigator          | Tmux integration                                                                                                                                                            |
 | plenary.nvim                | Lua utility library                                                                                                                                                         |

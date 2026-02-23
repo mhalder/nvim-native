@@ -39,6 +39,7 @@ vim.pack.add({
   { src = "https://github.com/folke/sidekick.nvim" },
   { src = "https://github.com/folke/tokyonight.nvim" },
   { src = "https://github.com/folke/trouble.nvim" },
+  { src = "https://github.com/sindrets/diffview.nvim" },
   { src = "https://github.com/folke/flash.nvim" },
   { src = "https://github.com/christoomey/vim-tmux-navigator" },
   { src = "https://github.com/nvim-lua/plenary.nvim" },
