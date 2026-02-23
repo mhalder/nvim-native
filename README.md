@@ -300,39 +300,39 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 
 ## Plugins
 
-| Plugin                      | Purpose                                                                                                                                 |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| blink.cmp                   | Completion                                                                                                                              |
-| blink-copilot               | Copilot source for blink.cmp                                                                                                            |
-| conform.nvim                | Formatting                                                                                                                              |
-| copilot.lua                 | GitHub Copilot inline ghost text                                                                                                        |
-| flash.nvim                  | Motion jump with labels                                                                                                                 |
-| friendly-snippets           | Snippet collection                                                                                                                      |
-| lazydev.nvim                | Lua dev support                                                                                                                         |
-| LuaSnip                     | Snippet engine                                                                                                                          |
-| markdown-preview.nvim       | Markdown preview                                                                                                                        |
-| mason-lspconfig.nvim        | Mason LSP bridge                                                                                                                        |
-| mason-tool-installer.nvim   | Auto-install tools                                                                                                                      |
-| mason.nvim                  | LSP/tool installer                                                                                                                      |
-| mini.nvim                   | File explorer, picker, statusline, notifications, text objects, pairs, surround, bracketed, key hints, git, diff, icons, misc utilities |
-| nvim-dap                    | Debugging                                                                                                                               |
-| nvim-dap-go                 | Go DAP adapter                                                                                                                          |
-| nvim-dap-python             | Python DAP adapter                                                                                                                      |
-| nvim-dap-ui                 | DAP UI                                                                                                                                  |
-| nvim-dap-virtual-text       | DAP inline values                                                                                                                       |
-| nvim-nio                    | Async library                                                                                                                           |
-| nvim-lint                   | Async linting                                                                                                                           |
-| obsidian.nvim               | Obsidian vault integration                                                                                                              |
-| nvim-lspconfig              | LSP                                                                                                                                     |
-| nvim-treesitter             | Syntax                                                                                                                                  |
-| nvim-treesitter-textobjects | Treesitter text object queries                                                                                                          |
-| quicker.nvim                | Quickfix enhancement                                                                                                                    |
-| sidekick.nvim               | AI assistant                                                                                                                            |
-| tokyonight.nvim             | Theme                                                                                                                                   |
-| trouble.nvim                | Diagnostics list                                                                                                                        |
-| vim-tmux-navigator          | Tmux integration                                                                                                                        |
-| plenary.nvim                | Lua utility library                                                                                                                     |
-| yazi.nvim                   | Yazi file manager integration                                                                                                           |
+| Plugin                      | Purpose                                                                                                                                                                     |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blink.cmp                   | Completion                                                                                                                                                                  |
+| blink-copilot               | Copilot source for blink.cmp                                                                                                                                                |
+| conform.nvim                | Formatting                                                                                                                                                                  |
+| copilot.lua                 | GitHub Copilot inline ghost text                                                                                                                                            |
+| flash.nvim                  | Motion jump with labels                                                                                                                                                     |
+| friendly-snippets           | Snippet collection                                                                                                                                                          |
+| lazydev.nvim                | Lua dev support                                                                                                                                                             |
+| LuaSnip                     | Snippet engine                                                                                                                                                              |
+| markdown-preview.nvim       | Markdown preview                                                                                                                                                            |
+| mason-lspconfig.nvim        | Mason LSP bridge                                                                                                                                                            |
+| mason-tool-installer.nvim   | Auto-install tools                                                                                                                                                          |
+| mason.nvim                  | LSP/tool installer                                                                                                                                                          |
+| mini.nvim                   | File explorer, picker, statusline, notifications, text objects, pairs, surround, bracketed, key hints, git, diff, icons, hipatterns, cursorword, trailspace, misc utilities |
+| nvim-dap                    | Debugging                                                                                                                                                                   |
+| nvim-dap-go                 | Go DAP adapter                                                                                                                                                              |
+| nvim-dap-python             | Python DAP adapter                                                                                                                                                          |
+| nvim-dap-ui                 | DAP UI                                                                                                                                                                      |
+| nvim-dap-virtual-text       | DAP inline values                                                                                                                                                           |
+| nvim-nio                    | Async library                                                                                                                                                               |
+| nvim-lint                   | Async linting                                                                                                                                                               |
+| obsidian.nvim               | Obsidian vault integration                                                                                                                                                  |
+| nvim-lspconfig              | LSP                                                                                                                                                                         |
+| nvim-treesitter             | Syntax                                                                                                                                                                      |
+| nvim-treesitter-textobjects | Treesitter text object queries                                                                                                                                              |
+| quicker.nvim                | Quickfix enhancement                                                                                                                                                        |
+| sidekick.nvim               | AI assistant                                                                                                                                                                |
+| tokyonight.nvim             | Theme                                                                                                                                                                       |
+| trouble.nvim                | Diagnostics list                                                                                                                                                            |
+| vim-tmux-navigator          | Tmux integration                                                                                                                                                            |
+| plenary.nvim                | Lua utility library                                                                                                                                                         |
+| yazi.nvim                   | Yazi file manager integration                                                                                                                                               |
 
 ## License
 
