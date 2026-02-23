@@ -15,13 +15,21 @@ vim.o.signcolumn = "yes"
 vim.o.conceallevel = 2
 vim.o.clipboard = "unnamedplus"
 vim.o.completeopt = "menuone,noselect,fuzzy,nosort"
+vim.o.showmode = false
+vim.o.pumheight = 10
+vim.opt.fillchars = { eob = " " }
 
 vim.o.updatetime = 300
 vim.o.timeoutlen = 500
+vim.o.ttimeoutlen = 0
 vim.o.confirm = true
 vim.o.exrc = true
 vim.o.autoread = true
 vim.o.smoothscroll = true
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
+vim.o.undofile = true
 
 vim.o.jumpoptions = "stack"
 vim.o.inccommand = "split"
@@ -44,7 +52,9 @@ function _G.bufline()
   for _, b in ipairs(vim.api.nvim_list_bufs()) do
     if vim.bo[b].buflisted then
       local name = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(b), ":t")
-      if name == "" then name = "[No Name]" end
+      if name == "" then
+        name = "[No Name]"
+      end
       local modified = vim.bo[b].modified and " +" or ""
       if b == cur then
         table.insert(bufs, "%#TabLineSel# " .. name .. modified .. " ")
