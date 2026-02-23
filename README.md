@@ -27,7 +27,7 @@ Plugins install automatically on first launch.
 **Treesitter** - Syntax highlighting for Lua, Python, Rust, TypeScript, JavaScript, Go, Bash, JSON, YAML, Markdown, HTML, CSS
 **Formatting** - Format on save via conform.nvim (stylua, ruff, prettierd, shfmt, goimports, rustfmt)
 **Linting** - Async linting via nvim-lint (selene, eslint_d, shellcheck, golangci-lint)
-**Completion** - blink.cmp with LuaSnip snippets and Copilot suggestions
+**Completion** - blink.cmp with LuaSnip snippets; Copilot inline ghost text
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
 **Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, flash.nvim motions, tmux integration
@@ -71,6 +71,17 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `as`  | Select CLI      |
 | `ap`  | Prompt          |
 | `C-.` | Focus Sidekick  |
+
+### Copilot (ghost text)
+
+| Key   | Action              |
+| ----- | ------------------- |
+| `M-l` | Accept suggestion   |
+| `M-j` | Accept line         |
+| `M-k` | Accept word         |
+| `M-]` | Next suggestion     |
+| `M-[` | Previous suggestion |
+| `C-]` | Dismiss             |
 
 ### Debug (`<leader>d`)
 
@@ -283,7 +294,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | blink.cmp                 | Completion                                                                                                                              |
 | blink-copilot             | Copilot source for blink.cmp                                                                                                            |
 | conform.nvim              | Formatting                                                                                                                              |
-| copilot.lua               | GitHub Copilot LSP                                                                                                                      |
+| copilot.lua               | GitHub Copilot inline ghost text                                                                                                        |
 | flash.nvim                | Motion jump with labels                                                                                                                 |
 | friendly-snippets         | Snippet collection                                                                                                                      |
 | lazydev.nvim              | Lua dev support                                                                                                                         |
