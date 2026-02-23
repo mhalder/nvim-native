@@ -34,6 +34,7 @@ vim.pack.add({
   { src = "https://github.com/theHamsta/nvim-dap-virtual-text" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects" },
   { src = "https://github.com/stevearc/quicker.nvim" },
   { src = "https://github.com/folke/sidekick.nvim" },
   { src = "https://github.com/folke/tokyonight.nvim" },

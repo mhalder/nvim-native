@@ -1,6 +1,29 @@
-require("mini.ai").setup()
-require("mini.diff").setup()
 require("mini.extra").setup()
+
+local gen_ai_spec = require("mini.extra").gen_ai_spec
+local spec_treesitter = require("mini.ai").gen_spec.treesitter
+require("mini.ai").setup({
+  custom_textobjects = {
+    -- mini.extra specs
+    B = gen_ai_spec.buffer(),
+    D = gen_ai_spec.diagnostic(),
+    I = gen_ai_spec.indent(),
+    L = gen_ai_spec.line(),
+    N = gen_ai_spec.number(),
+    -- treesitter specs (requires nvim-treesitter-textobjects)
+    F = spec_treesitter({ a = "@function.outer", i = "@function.inner" }),
+    o = spec_treesitter({
+      a = { "@conditional.outer", "@loop.outer" },
+      i = { "@conditional.inner", "@loop.inner" },
+    }),
+    c = spec_treesitter({ a = "@class.outer", i = "@class.inner" }),
+    C = spec_treesitter({ a = "@comment.outer", i = "@comment.inner" }),
+    A = spec_treesitter({ a = "@assignment.outer", i = "@assignment.inner" }),
+    R = spec_treesitter({ a = "@return.outer", i = "@return.inner" }),
+  },
+})
+
+require("mini.diff").setup()
 require("mini.git").setup()
 require("mini.icons").setup()
 local MiniMisc = require("mini.misc")
