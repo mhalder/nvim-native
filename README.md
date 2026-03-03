@@ -31,7 +31,7 @@ Plugins install automatically on first launch.
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
 **Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, flash.nvim motions, tmux integration
-**Notes** - Obsidian vault integration with wiki links, daily notes, and templates
+**Notes** - Obsidian multi-vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff), side-by-side diff viewer (diffview.nvim)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
 
@@ -324,7 +324,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | mason-lspconfig.nvim        | Mason LSP bridge                                                                                                                                                            |
 | mason-tool-installer.nvim   | Auto-install tools                                                                                                                                                          |
 | mason.nvim                  | LSP/tool installer                                                                                                                                                          |
-| mini.nvim                   | File explorer, picker, statusline, notifications, text objects, pairs, surround, bracketed, key hints, git, diff, icons, hipatterns, cursorword, trailspace, misc utilities |
+| mini.nvim                   | File explorer, picker, statusline, notifications, text objects, surround, bracketed, key hints, git, diff, icons, hipatterns, cursorword, trailspace, misc utilities |
 | nvim-dap                    | Debugging                                                                                                                                                                   |
 | nvim-dap-go                 | Go DAP adapter                                                                                                                                                              |
 | nvim-dap-python             | Python DAP adapter                                                                                                                                                          |

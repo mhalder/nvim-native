@@ -56,7 +56,6 @@ require("mini.files").setup({
     preview = true,
   },
 })
-require("mini.pairs").setup()
 require("mini.notify").setup()
 require("mini.statusline").setup()
 require("mini.pick").setup({

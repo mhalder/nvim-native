@@ -3,10 +3,29 @@ require("obsidian").setup({
     {
       name = "new-terminus",
       path = "~/vaults/new-terminus",
+      overrides = {
+        notes_subdir = "00-inbox",
+        new_notes_location = "notes_subdir",
+      },
+    },
+    {
+      name = "zettelkasten",
+      path = "~/vaults/zettelkasten",
+      overrides = {
+        notes_subdir = "inbox",
+        new_notes_location = "notes_subdir",
+        daily_notes = {
+          folder = false,
+        },
+        templates = {
+          folder = "templates",
+          date_format = "%Y-%m-%d",
+          time_format = "%H:%M",
+        },
+      },
     },
   },
 
-  -- Match Obsidian app: new files go to 00-inbox
   notes_subdir = "00-inbox",
   new_notes_location = "notes_subdir",
 
