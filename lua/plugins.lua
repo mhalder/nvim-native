@@ -3,7 +3,8 @@ vim.api.nvim_create_autocmd("PackChanged", {
   callback = function(ev)
     local name, kind = ev.data.spec.name, ev.data.kind
     if name == "blink.cmp" and (kind == "install" or kind == "update") then
-      vim.system({ "cargo", "+nightly-2026-02-18", "build", "--release" }, { cwd = ev.data.path }):wait()
+      -- vim.system({ "cargo", "+nightly-2026-02-18", "build", "--release" }, { cwd = ev.data.path }):wait()
+      vim.system({ "cargo", "build", "--release" }, { cwd = ev.data.path }):wait()
     end
     if name == "markdown-preview.nvim" and (kind == "install" or kind == "update") then
       vim.system({ "npm", "install" }, { cwd = ev.data.path .. "/app" }):wait()
@@ -36,6 +37,7 @@ vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects" },
   { src = "https://github.com/stevearc/quicker.nvim" },
+  { src = "https://github.com/nickjvandyke/opencode.nvim" },
   { src = "https://github.com/folke/sidekick.nvim" },
   { src = "https://github.com/folke/tokyonight.nvim" },
   { src = "https://github.com/folke/trouble.nvim" },

@@ -120,8 +120,18 @@ require("obsidian").setup({
     end,
   },
 
-  preferred_link_style = "wiki",
-  wiki_link_func = "use_alias_only",
+  link = {
+    style = "wiki",
+    wiki = function(opts)
+      local header_or_block = ""
+      if opts.anchor then
+        header_or_block = string.format("#%s", opts.anchor.header)
+      elseif opts.block then
+        header_or_block = string.format("#%s", opts.block.id)
+      end
+      return string.format("[[%s%s]]", opts.label, header_or_block)
+    end,
+  },
   legacy_commands = false,
 
   -- Attachments: match Obsidian app config
