@@ -1,3 +1,6 @@
+-- Subtle border for sidekick float
+vim.api.nvim_set_hl(0, "SidekickBorder", { fg = "#292e42" })
+
 require("sidekick").setup({
   nes = { enabled = false },
   cli = {
@@ -6,6 +9,11 @@ require("sidekick").setup({
       float = {
         width = 0.9,
         height = 0.9,
+        border = "rounded",
+        title = "",
+      },
+      wo = {
+        winhighlight = "FloatBorder:SidekickBorder",
       },
     },
     mux = {
