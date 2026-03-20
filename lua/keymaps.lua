@@ -207,6 +207,11 @@ map("n", "<leader>oc", "<cmd>Obsidian toggle<cr>", { desc = "toggle checkbox" })
 map("v", "<leader>ol", "<cmd>Obsidian link<cr>", { desc = "link selection" })
 map("v", "<leader>oe", "<cmd>Obsidian extract_note<cr>", { desc = "extract to note" })
 
+-- diagnostics toggle
+map("n", "<leader>td", function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { desc = "toggle diagnostics" })
+
 -- trouble
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "diagnostics" })
 map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "buffer diagnostics" })
