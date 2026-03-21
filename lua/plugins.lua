@@ -3,7 +3,6 @@ vim.api.nvim_create_autocmd("PackChanged", {
   callback = function(ev)
     local name, kind = ev.data.spec.name, ev.data.kind
     if name == "blink.cmp" and (kind == "install" or kind == "update") then
-      -- vim.system({ "cargo", "+nightly-2026-02-18", "build", "--release" }, { cwd = ev.data.path }):wait()
       vim.system({ "cargo", "build", "--release" }, { cwd = ev.data.path }):wait()
     end
     if name == "markdown-preview.nvim" and (kind == "install" or kind == "update") then
@@ -16,7 +15,6 @@ vim.pack.add({
   { src = "https://github.com/saghen/blink.cmp" },
   { src = "https://github.com/stevearc/conform.nvim" },
   { src = "https://github.com/zbirenbaum/copilot.lua" },
-  { src = "https://github.com/fang2hou/blink-copilot" },
   { src = "https://github.com/rafamadriz/friendly-snippets" },
   { src = "https://github.com/folke/lazydev.nvim" },
   { src = "https://github.com/L3MON4D3/LuaSnip" },

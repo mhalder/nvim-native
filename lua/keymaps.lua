@@ -189,6 +189,10 @@ end, { desc = "message history" })
 
 -- obsidian
 map("n", "<leader>oO", function()
+  if not Obsidian or not Obsidian.workspace then
+    vim.notify("Obsidian not initialized", vim.log.levels.WARN)
+    return
+  end
   local vault = Obsidian.workspace.name
   vim.fn.jobstart({ "obsidian", "obsidian://open?vault=" .. vault }, { detach = true })
 end, { desc = "open Obsidian app" })

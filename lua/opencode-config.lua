@@ -1,8 +1,6 @@
 ---@type opencode.Opts
 vim.g.opencode_opts = {}
 
-vim.o.autoread = true
-
 local map = vim.keymap.set
 
 map({ "n", "x" }, "<leader>aoa", function()
