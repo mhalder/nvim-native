@@ -9,7 +9,7 @@ map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "clear search highlight" })
 
 -- mini.pick
 map("n", "<leader><leader>", function()
-  require("mini.pick").builtin.files()
+  require("fzf-lua").files()
 end, { desc = "find files" })
 map("n", "<leader>fg", function()
   require("fzf-lua").live_grep()
