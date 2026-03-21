@@ -8,6 +8,7 @@ A minimal Neovim 0.12+ configuration using native `vim.pack` for plugin manageme
 - Git
 - Rust via [rustup](https://rustup.rs/) (builds blink.cmp)
 - Node.js (markdown-preview.nvim)
+- [fzf](https://github.com/junegunn/fzf) (fuzzy finder backend)
 - [uv](https://github.com/astral-sh/uv) (Python debugging)
 - [yazi](https://yazi-rs.github.io/) (terminal file manager)
 
@@ -30,7 +31,7 @@ Plugins install automatically on first launch.
 **Completion** - blink.cmp with LuaSnip snippets; Copilot inline ghost text
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
-**Navigation** - mini.files explorer, mini.pick fuzzy finder, yazi file manager, flash.nvim motions, tmux integration
+**Navigation** - mini.files explorer, mini.pick fuzzy finder, fzf-lua live grep, yazi file manager, flash.nvim motions, tmux integration
 **Notes** - Obsidian multi-vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff), side-by-side diff viewer (diffview.nvim)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
@@ -59,7 +60,7 @@ Leader: `Space` | Local Leader: `\`
 | `fs`               | Document symbols  |
 | `fS`               | Workspace symbols |
 
-In grep/files picker, press `<C-o>` to add glob filters (e.g., `*.md`, `src/**`).
+In grep picker (fzf-lua), append ` -- *.lua` to filter by glob (e.g., `search term -- *.md`).
 In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### AI (`<leader>a`)
@@ -302,6 +303,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
     ├── copilot-config.lua
     ├── debugging-config.lua
     ├── flash-config.lua
+    ├── fzf-config.lua
     ├── keymaps.lua
     ├── lint-config.lua
     ├── lsp-config.lua
@@ -329,6 +331,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | copilot.lua                 | GitHub Copilot inline ghost text                                                                                                                                     |
 | flash.nvim                  | Motion jump with labels                                                                                                                                              |
 | friendly-snippets           | Snippet collection                                                                                                                                                   |
+| fzf-lua                     | Fuzzy finder (live grep)                                                                                                                                             |
 | lazydev.nvim                | Lua dev support                                                                                                                                                      |
 | LuaSnip                     | Snippet engine                                                                                                                                                       |
 | markdown-preview.nvim       | Markdown preview                                                                                                                                                     |
