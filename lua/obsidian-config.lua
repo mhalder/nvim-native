@@ -96,7 +96,7 @@ require("obsidian").setup({
   },
 
   picker = {
-    name = "mini.pick",
+    name = "fzf-lua",
     note_mappings = {
       new = "<C-x>",
       insert_link = "<C-l>",

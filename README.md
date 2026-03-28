@@ -31,7 +31,7 @@ Plugins install automatically on first launch.
 **Completion** - blink.cmp with LuaSnip snippets; Copilot inline ghost text
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
-**Navigation** - mini.files explorer, fzf-lua (files, grep, vim.ui.select), mini.pick (buffers, help, extras), yazi file manager, flash.nvim motions, tmux integration
+**Navigation** - mini.files explorer, fzf-lua (files, grep, buffers, symbols, vim.ui.select), yazi file manager, flash.nvim motions, tmux integration
 **Notes** - Obsidian multi-vault integration with wiki links, daily notes, and templates
 **Git** - Git commands (mini.git), diff signs and hunk staging (mini.diff), side-by-side diff viewer (diffview.nvim)
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
@@ -331,7 +331,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | copilot.lua                 | GitHub Copilot inline ghost text                                                                                                                                     |
 | flash.nvim                  | Motion jump with labels                                                                                                                                              |
 | friendly-snippets           | Snippet collection                                                                                                                                                   |
-| fzf-lua                     | Fuzzy finder (live grep)                                                                                                                                             |
+| fzf-lua                     | Fuzzy finder (files, grep, buffers, symbols, diagnostics, vim.ui.select)                                                                                             |
 | lazydev.nvim                | Lua dev support                                                                                                                                                      |
 | LuaSnip                     | Snippet engine                                                                                                                                                       |
 | markdown-preview.nvim       | Markdown preview                                                                                                                                                     |
