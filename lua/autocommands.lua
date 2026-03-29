@@ -87,6 +87,24 @@ autocmd("FileChangedShell", {
   end,
 })
 
+-- zero out leader key timeout in terminal buffers
+local saved_timeoutlen
+autocmd("TermEnter", {
+  desc = "Disable leader timeout in terminal",
+  group = group,
+  callback = function()
+    saved_timeoutlen = vim.o.timeoutlen
+    vim.o.timeoutlen = 0
+  end,
+})
+autocmd("TermLeave", {
+  desc = "Restore leader timeout from terminal",
+  group = group,
+  callback = function()
+    vim.o.timeoutlen = saved_timeoutlen or 500
+  end,
+})
+
 -- check for file changes when gaining focus or entering a buffer
 autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
   desc = "Check for file changes",
