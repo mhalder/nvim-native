@@ -128,6 +128,7 @@ miniclue.setup({
     { mode = "x", keys = "gh", desc = "apply hunk" },
     { mode = "n", keys = "gH", desc = "reset hunk" },
     { mode = "x", keys = "gH", desc = "reset hunk" },
+    miniclue.gen_clues.square_brackets(),
     miniclue.gen_clues.builtin_completion(),
     miniclue.gen_clues.g(),
     miniclue.gen_clues.marks(),
