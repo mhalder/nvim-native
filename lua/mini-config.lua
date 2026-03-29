@@ -1,7 +1,15 @@
 require("mini.extra").setup()
 
 local gen_ai_spec = require("mini.extra").gen_ai_spec
-local spec_treesitter = require("mini.ai").gen_spec.treesitter
+-- Wrap gen_spec.treesitter to ensure parser is parsed first (needed for Neovim nightly)
+local spec_treesitter = function(captures)
+  local inner = require("mini.ai").gen_spec.treesitter(captures)
+  return function(ai_type, id, opts)
+    local parser = vim.treesitter.get_parser(0, nil, { error = false })
+    if parser then parser:parse() end
+    return inner(ai_type, id, opts)
+  end
+end
 require("mini.ai").setup({
   custom_textobjects = {
     -- mini.extra specs
