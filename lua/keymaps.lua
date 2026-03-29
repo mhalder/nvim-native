@@ -153,12 +153,12 @@ end, { desc = "yazi" })
 map({ "n", "v" }, "<leader>cf", function()
   require("conform").format({ async = true })
 end, { desc = "format buffer" })
-map("n", "<leader>ta", function()
+map("n", "<leader>wa", function()
   vim.g.disable_autoformat = not vim.g.disable_autoformat
   local state = vim.g.disable_autoformat and "disabled" or "enabled"
   vim.notify("Autoformat " .. state)
 end, { desc = "toggle autoformat" })
-map("n", "<leader>tc", function()
+map("n", "<leader>wc", function()
   local current = vim.o.conceallevel
   vim.o.conceallevel = current == 0 and 2 or 0
   vim.notify("Conceal " .. (vim.o.conceallevel == 0 and "off" or "on"))
@@ -168,6 +168,7 @@ map("n", "<leader>cs", "<cmd>FormatChanged staged<cr>", { desc = "format git sta
 
 -- terminal
 map("t", "<C-x>", "<C-\\><C-n>", { desc = "exit terminal mode" })
+map("n", "<leader>tt", "<cmd>rightbelow vsplit | terminal<cr>", { desc = "terminal split" })
 
 -- window
 map("n", "<leader>wz", function()
@@ -203,7 +204,7 @@ map("v", "<leader>ol", "<cmd>Obsidian link<cr>", { desc = "link selection" })
 map("v", "<leader>oe", "<cmd>Obsidian extract_note<cr>", { desc = "extract to note" })
 
 -- diagnostics toggle
-map("n", "<leader>td", function()
+map("n", "<leader>wd", function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { desc = "toggle diagnostics" })
 

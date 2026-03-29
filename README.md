@@ -125,12 +125,11 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `cc` | Format git changed |
 | `cs` | Format git staged  |
 
-### Toggle (`<leader>t`)
+### Terminal (`<leader>t`)
 
-| Key  | Action            |
-| ---- | ----------------- |
-| `ta` | Toggle autoformat |
-| `tc` | Toggle conceal    |
+| Key  | Action         |
+| ---- | -------------- |
+| `tt` | Terminal split |
 
 ### Trouble (`<leader>x`)
 
@@ -151,12 +150,15 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `jl` | Save and quit      |
 | `j;` | Quit all (no save) |
 
-### Window (`<leader>w`)
+### Window/Toggle (`<leader>w`)
 
-| Key  | Action          |
-| ---- | --------------- |
-| `wz` | Zoom toggle     |
-| `wm` | Message history |
+| Key  | Action             |
+| ---- | ------------------ |
+| `wa` | Toggle autoformat  |
+| `wc` | Toggle conceal     |
+| `wd` | Toggle diagnostics |
+| `wm` | Message history    |
+| `wz` | Toggle zoom        |
 
 ### Git (`<leader>g`)
 
