@@ -56,7 +56,7 @@ autocmd("WinEnter", {
   desc = "Show cursorline in active window",
   group = group,
   callback = function()
-    vim.wo.cursorline = true
+    vim.wo.cursorline = vim.bo.buftype ~= "terminal"
   end,
 })
 
@@ -87,7 +87,19 @@ autocmd("FileChangedShell", {
   end,
 })
 
--- zero out leader key timeout in terminal buffers
+-- clean up terminal buffers for transparent background
+autocmd("TermOpen", {
+  desc = "Disable UI chrome in terminal buffers",
+  group = group,
+  callback = function()
+    vim.wo.cursorline = false
+    vim.wo.number = false
+    vim.wo.relativenumber = false
+    vim.wo.signcolumn = "no"
+    vim.b.minicursorword_disable = true
+  end,
+})
+
 local saved_timeoutlen
 autocmd("TermEnter", {
   desc = "Disable leader timeout in terminal",
