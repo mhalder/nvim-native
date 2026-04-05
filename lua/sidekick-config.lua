@@ -9,11 +9,6 @@ vim.api.nvim_create_autocmd("ColorScheme", { callback = set_sidekick_border })
 require("sidekick").setup({
   nes = { enabled = false },
   cli = {
-    tools = {
-      claude = {
-        cmd = { "claude", "--add-dir", vim.fn.expand("~/vaults/claude") },
-      },
-    },
     win = {
       layout = "float",
       float = {
