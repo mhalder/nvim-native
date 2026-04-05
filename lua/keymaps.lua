@@ -167,6 +167,7 @@ map("n", "<leader>cc", "<cmd>FormatChanged<cr>", { desc = "format git changed" }
 map("n", "<leader>cs", "<cmd>FormatChanged staged<cr>", { desc = "format git staged" })
 
 -- terminal
+map("t", "<S-CR>", "\x1b[13;2u", { desc = "shift+enter to terminal" })
 map("t", "<C-x>", "<C-\\><C-n>", { desc = "exit terminal mode" })
 map("n", "<leader>tt", "<cmd>rightbelow vsplit | terminal<cr>", { desc = "terminal split" })
 

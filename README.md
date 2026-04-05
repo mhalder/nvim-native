@@ -221,6 +221,7 @@ Enhanced `f`/`t` motions show jump labels automatically.
 | `<` / `>`   | Indent (visual, repeatable) |
 | `C-Left`    | Previous buffer             |
 | `C-Right`   | Next buffer                 |
+| `S-CR`      | Shift+Enter to terminal     |
 | `C-x`       | Exit terminal mode          |
 
 ### Text Objects (mini.ai)
