@@ -35,7 +35,6 @@ vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects" },
   { src = "https://github.com/stevearc/quicker.nvim" },
-  { src = "https://github.com/nickjvandyke/opencode.nvim" },
   { src = "https://github.com/folke/sidekick.nvim" },
   { src = "https://github.com/folke/tokyonight.nvim" },
   { src = "https://github.com/folke/trouble.nvim" },

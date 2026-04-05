@@ -312,7 +312,6 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
     ├── luasnip-config.lua
     ├── mini-config.lua
     ├── obsidian-config.lua
-    ├── opencode-config.lua
     ├── options.lua
     ├── plugins.lua
     ├── quicker-config.lua
@@ -349,7 +348,6 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | nvim-nio                    | Async library                                                                                                                                                        |
 | nvim-lint                   | Async linting                                                                                                                                                        |
 | obsidian.nvim               | Obsidian vault integration                                                                                                                                           |
-| opencode.nvim               | OpenCode AI assistant integration                                                                                                                                    |
 | nvim-lspconfig              | LSP                                                                                                                                                                  |
 | nvim-treesitter             | Syntax                                                                                                                                                               |
 | nvim-treesitter-textobjects | Treesitter text object queries                                                                                                                                       |
