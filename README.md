@@ -23,7 +23,7 @@ Plugins install automatically on first launch.
 
 ## Features
 
-**AI** - Sidekick (Claude), OpenCode, and GitHub Copilot integration
+**AI** - Sidekick (Claude) and GitHub Copilot integration
 **LSP** - Lua, TypeScript, Python (basedpyright), Rust
 **Treesitter** - Syntax highlighting for Lua, Python, Rust, TypeScript, JavaScript, Go, Bash, JSON, YAML, Markdown, HTML, CSS
 **Formatting** - Format on save via conform.nvim (stylua, ruff, prettierd, shfmt, goimports, rustfmt)
@@ -73,16 +73,6 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `ap`  | Prompt          |
 | `C-.` | Focus Sidekick  |
 
-### OpenCode (`<leader>ao`)
-
-| Key   | Mode | Action    |
-| ----- | ---- | --------- |
-| `aoa` | n,x  | Ask       |
-| `aox` | n,x  | Select    |
-| `aot` | n,t  | Toggle    |
-| `go`  | n,x  | Add range |
-| `goo` | n    | Add line  |
-
 ### Copilot (ghost text)
 
 | Key   | Action              |
@@ -121,9 +111,10 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 | Key  | Action             |
 | ---- | ------------------ |
+| `ca` | Code action        |
+| `cn` | Rename symbol      |
 | `cf` | Format buffer      |
-| `cc` | Format git changed |
-| `cs` | Format git staged  |
+| `cg` | Format git changed |
 
 ### Terminal (`<leader>t`)
 
@@ -169,6 +160,21 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `gh` | File history      |
 | `gH` | Repo history      |
 | `gc` | Close diffview    |
+
+### LSP (built-in `gr*`)
+
+| Key   | Action                  |
+| ----- | ----------------------- |
+| `gra` | Code action             |
+| `grn` | Rename                  |
+| `grr` | References              |
+| `gri` | Implementation          |
+| `grt` | Type definition         |
+| `grx` | Codelens run            |
+| `gO`  | Document symbols        |
+| `K`   | Hover                   |
+| `C-]` | Go to definition        |
+| `C-s` | Signature help (insert) |
 
 ### Git (no prefix)
 
@@ -328,7 +334,6 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | Plugin                      | Purpose                                                                                                                                                              |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | blink.cmp                   | Completion                                                                                                                                                           |
-| blink-copilot               | Copilot source for blink.cmp                                                                                                                                         |
 | conform.nvim                | Formatting                                                                                                                                                           |
 | copilot.lua                 | GitHub Copilot inline ghost text                                                                                                                                     |
 | flash.nvim                  | Motion jump with labels                                                                                                                                              |

@@ -5,6 +5,8 @@ require("blink.cmp").setup({
     preset = "default",
     ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
     ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
+    ["<C-d>"] = { "scroll_documentation_down", "fallback" },
+    ["<C-u>"] = { "scroll_documentation_up", "fallback" },
   },
   sources = {
     default = { "obsidian", "obsidian_new", "obsidian_tags", "lsp", "path", "snippets", "buffer" },

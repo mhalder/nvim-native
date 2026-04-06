@@ -6,7 +6,9 @@ local spec_treesitter = function(captures)
   local inner = require("mini.ai").gen_spec.treesitter(captures)
   return function(ai_type, id, opts)
     local parser = vim.treesitter.get_parser(0, nil, { error = false })
-    if parser then parser:parse() end
+    if parser then
+      parser:parse()
+    end
     return inner(ai_type, id, opts)
   end
 end
@@ -132,6 +134,8 @@ miniclue.setup({
     { mode = "n", keys = "<Leader>w", desc = "+window/toggle" },
     { mode = "n", keys = "<Leader>g", desc = "+git" },
     { mode = "n", keys = "<Leader>x", desc = "+trouble" },
+    { mode = "n", keys = "gr", desc = "+lsp" },
+    { mode = "x", keys = "gr", desc = "+lsp" },
     { mode = "n", keys = "gh", desc = "apply hunk" },
     { mode = "x", keys = "gh", desc = "apply hunk" },
     { mode = "n", keys = "gH", desc = "reset hunk" },

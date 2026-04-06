@@ -118,8 +118,20 @@ autocmd("TermLeave", {
 })
 
 -- check for file changes when gaining focus or entering a buffer
-autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+autocmd({ "FocusGained", "BufEnter", "CursorHold", "TermLeave", "TermClose" }, {
   desc = "Check for file changes",
   group = group,
   command = "silent! checktime",
 })
+
+-- poll for external file changes (catches tmux overlays like lazygit)
+local checktime_timer = vim.uv.new_timer()
+checktime_timer:start(
+  0,
+  1000,
+  vim.schedule_wrap(function()
+    if vim.fn.getcmdwintype() == "" and vim.fn.mode() == "n" then
+      vim.cmd("silent! checktime")
+    end
+  end)
+)

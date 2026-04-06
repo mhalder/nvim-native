@@ -149,10 +149,17 @@ map("n", "<leader>-", function()
   require("yazi").yazi()
 end, { desc = "yazi" })
 
--- format
+-- code: format
 map({ "n", "v" }, "<leader>cf", function()
   require("conform").format({ async = true })
 end, { desc = "format buffer" })
+map("n", "<leader>cg", "<cmd>FormatChanged<cr>", { desc = "format git changed" })
+
+-- code: lsp actions (supplement built-in gr* mappings)
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "code action" })
+map("n", "<leader>cn", vim.lsp.buf.rename, { desc = "rename symbol" })
+
+-- toggles
 map("n", "<leader>wa", function()
   vim.g.disable_autoformat = not vim.g.disable_autoformat
   local state = vim.g.disable_autoformat and "disabled" or "enabled"
@@ -163,8 +170,6 @@ map("n", "<leader>wc", function()
   vim.o.conceallevel = current == 0 and 2 or 0
   vim.notify("Conceal " .. (vim.o.conceallevel == 0 and "off" or "on"))
 end, { desc = "toggle conceal" })
-map("n", "<leader>cc", "<cmd>FormatChanged<cr>", { desc = "format git changed" })
-map("n", "<leader>cs", "<cmd>FormatChanged staged<cr>", { desc = "format git staged" })
 
 -- terminal
 map("t", "<S-CR>", "\x1b[13;2u", { desc = "shift+enter to terminal" })

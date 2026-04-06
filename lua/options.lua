@@ -1,4 +1,3 @@
-vim.o.termguicolors = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
@@ -14,9 +13,10 @@ vim.o.cursorline = true
 vim.o.signcolumn = "yes"
 vim.o.conceallevel = 2
 vim.o.clipboard = "unnamedplus"
-vim.o.completeopt = "menuone,noselect,fuzzy,nosort"
+vim.o.completeopt = "menuone,noselect,fuzzy,nearest,popup"
 vim.o.showmode = false
 vim.o.pumheight = 10
+vim.o.pummaxwidth = 40
 vim.opt.fillchars = { eob = " " }
 
 vim.o.updatetime = 300
@@ -33,6 +33,9 @@ vim.o.undofile = true
 
 vim.o.jumpoptions = "stack"
 vim.o.inccommand = "split"
+vim.o.winborder = "rounded"
+
+vim.o.messagesopt = "hit-enter,history:500,progress:c"
 
 vim.o.grepprg = "rg --vimgrep"
 vim.o.grepformat = "%f:%l:%c:%m"
@@ -40,9 +43,15 @@ vim.o.grepformat = "%f:%l:%c:%m"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.opt.diffopt:append("algorithm:histogram,linematch:60")
+vim.opt.diffopt:append("algorithm:histogram,linematch:60,inline:word")
 
 vim.diagnostic.config({ virtual_text = true })
+
+-- experimental: new message/cmdline UI (0.12+)
+-- avoids "Press ENTER" interruptions, highlights cmdline as you type
+pcall(function()
+  require("vim._core.ui2").enable()
+end)
 
 -- Native buffer tabline
 vim.o.showtabline = 2
