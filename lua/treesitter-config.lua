@@ -9,6 +9,8 @@ require("nvim-treesitter").install({
   "json",
   "yaml",
   "markdown",
+  "markdown_inline",
   "html",
   "css",
+  "vimdoc",
 })

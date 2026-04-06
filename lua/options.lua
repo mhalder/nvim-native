@@ -43,7 +43,7 @@ vim.o.grepformat = "%f:%l:%c:%m"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.opt.diffopt:append("algorithm:histogram,linematch:60,inline:word")
+vim.opt.diffopt:append("algorithm:histogram,linematch:60,indent-heuristic,inline:word")
 
 vim.diagnostic.config({ virtual_text = true })
 
