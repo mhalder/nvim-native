@@ -12,8 +12,11 @@ map("n", "<leader><leader>", function()
   require("fzf-lua").files()
 end, { desc = "find files" })
 map("n", "<leader>fg", function()
-  require("fzf-lua").live_grep()
-end, { desc = "grep" })
+  require("fzf-lua").live_grep({
+    hidden = true,
+    rg_opts = "--column --line-number --no-heading --color=always --smart-case --max-columns=4096 --glob=!.git -e",
+  })
+end, { desc = "grep (hidden)" })
 map("n", "<leader>fw", function()
   require("fzf-lua").grep_cword()
 end, { desc = "grep word" })
