@@ -21,6 +21,9 @@ require("sidekick").setup({
         winhighlight = "FloatBorder:SidekickBorder",
       },
     },
+    tools = {
+      pi = { env = { WAYLAND_DISPLAY = "workaround" } },
+    },
     mux = {
       backend = "tmux",
       enabled = true,
