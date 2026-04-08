@@ -12,5 +12,6 @@ require("nvim-treesitter").install({
   "markdown_inline",
   "html",
   "css",
+  "vim",
   "vimdoc",
 })
