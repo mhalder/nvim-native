@@ -9,6 +9,22 @@ require("obsidian").setup({
       },
     },
     {
+      name = "pi",
+      path = "~/vaults/pi",
+      overrides = {
+        notes_subdir = "inbox",
+        new_notes_location = "notes_subdir",
+        daily_notes = {
+          folder = "daily",
+        },
+        templates = {
+          folder = "templates",
+          date_format = "%Y-%m-%d",
+          time_format = "%H:%M",
+        },
+      },
+    },
+    {
       name = "zettelkasten",
       path = "~/vaults/zettelkasten",
       overrides = {
