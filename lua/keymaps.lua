@@ -86,7 +86,7 @@ map("n", "<leader>fS", function()
 end, { desc = "workspace symbols" })
 
 -- quit and save
-map("n", "<leader>jj", vim.cmd.quit, { desc = "quit" })
+map("n", "<leader>jj", "<cmd>qa<cr>", { desc = "quit" })
 map("n", "<leader>jk", vim.cmd.write, { desc = "save" })
 map("n", "<leader>jl", vim.cmd.wq, { desc = "save and quit" })
 map("n", "<leader>j;", function()
@@ -224,13 +224,12 @@ map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
 
--- git diff (built-in difftool)
-map("n", "<leader>gd", "<cmd>DiffTool<cr>", { desc = "diff working tree" })
-map("n", "<leader>gs", function()
-  vim.cmd("Git diff --staged --name-only")
-end, { desc = "diff staged (list)" })
+-- git diff current file against index
+map("n", "<leader>gd", function()
+  MiniDiff.toggle_overlay(0)
+end, { desc = "toggle diff overlay" })
 map("n", "<leader>gh", "<cmd>Git log --oneline -- %<cr>", { desc = "file history" })
-map("n", "<leader>gH", "<cmd>Git log --oneline<cr>", { desc = "repo history" })
+map({ "n", "x" }, "<leader>gs", "<cmd>lua MiniGit.show_at_cursor()<cr>", { desc = "show git at cursor" })
 map("n", "<leader>gb", "<cmd>Git blame -- %<cr>", { desc = "blame file" })
 
 -- buffer navigation
