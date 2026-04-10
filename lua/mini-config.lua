@@ -49,6 +49,19 @@ hipatterns.setup({
 
 require("mini.diff").setup()
 require("mini.git").setup()
+
+-- align blame output with source buffer
+vim.api.nvim_create_autocmd("User", {
+  pattern = "MiniGitCommandSplit",
+  callback = function(au_data)
+    if au_data.data.git_subcommand ~= "blame" then return end
+    local win_src = au_data.data.win_source
+    vim.wo.wrap = false
+    vim.fn.winrestview({ topline = vim.fn.line("w0", win_src) })
+    vim.api.nvim_win_set_cursor(0, { vim.fn.line(".", win_src), 0 })
+    vim.wo[win_src].scrollbind, vim.wo.scrollbind = true, true
+  end,
+})
 require("mini.icons").setup()
 local MiniMisc = require("mini.misc")
 MiniMisc.setup()
