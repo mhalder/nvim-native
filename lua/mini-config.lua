@@ -54,7 +54,9 @@ require("mini.git").setup()
 vim.api.nvim_create_autocmd("User", {
   pattern = "MiniGitCommandSplit",
   callback = function(au_data)
-    if au_data.data.git_subcommand ~= "blame" then return end
+    if au_data.data.git_subcommand ~= "blame" then
+      return
+    end
     local win_src = au_data.data.win_source
     vim.wo.wrap = false
     vim.fn.winrestview({ topline = vim.fn.line("w0", win_src) })
@@ -98,7 +100,7 @@ require("mini.pick").setup({
 })
 require("mini.surround").setup({
   mappings = {
-    add = "gz",
+    add = "gza",
     delete = "gzd",
     find = "gzf",
     find_left = "gzF",

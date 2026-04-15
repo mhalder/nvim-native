@@ -1,14 +1,6 @@
 require("obsidian").setup({
   workspaces = {
     {
-      name = "new-terminus",
-      path = "~/vaults/new-terminus",
-      overrides = {
-        notes_subdir = "00-inbox",
-        new_notes_location = "notes_subdir",
-      },
-    },
-    {
       name = "pi",
       path = "~/vaults/pi",
       overrides = {
@@ -16,22 +8,6 @@ require("obsidian").setup({
         new_notes_location = "notes_subdir",
         daily_notes = {
           folder = "daily",
-        },
-        templates = {
-          folder = "templates",
-          date_format = "%Y-%m-%d",
-          time_format = "%H:%M",
-        },
-      },
-    },
-    {
-      name = "zettelkasten",
-      path = "~/vaults/zettelkasten",
-      overrides = {
-        notes_subdir = "inbox",
-        new_notes_location = "notes_subdir",
-        daily_notes = {
-          folder = false,
         },
         templates = {
           folder = "templates",
