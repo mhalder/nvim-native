@@ -22,7 +22,7 @@ require("sidekick").setup({
       },
     },
     tools = {
-      pi = { env = { WAYLAND_DISPLAY = "workaround" } },
+      pi = {},
     },
     mux = {
       backend = "tmux",
