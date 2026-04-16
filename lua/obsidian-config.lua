@@ -76,9 +76,22 @@ require("obsidian").setup({
     },
   },
 
-  -- Frontmatter: preserve vault schema (id, type, tags, created)
+  -- Frontmatter: preserve vault schema and avoid empty aliases: [] noise.
   frontmatter = {
     enabled = true,
+    func = function(note)
+      local out = { id = note.id, tags = note.tags }
+      if note.aliases ~= nil and #note.aliases > 0 then
+        out.aliases = note.aliases
+      end
+      if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+        for k, v in pairs(note.metadata) do
+          out[k] = v
+        end
+      end
+      return out
+    end,
+    sort = { "id", "tags", "aliases" },
   },
 
   completion = {
