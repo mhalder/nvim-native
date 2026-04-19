@@ -1,3 +1,14 @@
+local skip_default_tags_for = {
+  ["TODO.md"] = true,
+  ["PLAN.md"] = true,
+  ["CONTEXT.md"] = true,
+  ["NEXT.md"] = true,
+  ["SYSTEM.md"] = true,
+  ["APPEND_SYSTEM.md"] = true,
+  ["README.md"] = true,
+  ["AGENTS.md"] = true,
+}
+
 require("obsidian").setup({
   workspaces = {
     {
@@ -78,7 +89,12 @@ require("obsidian").setup({
 
   -- Frontmatter: preserve vault schema and avoid empty aliases: [] noise.
   frontmatter = {
-    enabled = true,
+    enabled = function(fname)
+      if fname == nil then
+        return true
+      end
+      return not skip_default_tags_for[vim.fs.basename(fname)]
+    end,
     func = function(note)
       local out = { id = note.id, tags = note.tags }
       if note.aliases ~= nil and #note.aliases > 0 then
