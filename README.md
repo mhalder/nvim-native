@@ -65,13 +65,10 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### AI (`<leader>a`)
 
-| Key   | Action          |
-| ----- | --------------- |
-| `aa`  | Toggle Sidekick |
-| `ac`  | Toggle Claude   |
-| `as`  | Select CLI      |
-| `ap`  | Prompt          |
-| `C-.` | Focus Sidekick  |
+| Key   | Action         |
+| ----- | -------------- |
+| `ap`  | Prompt         |
+| `C-.` | Focus Sidekick |
 
 ### Copilot (ghost text)
 
