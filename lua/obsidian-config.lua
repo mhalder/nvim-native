@@ -29,7 +29,7 @@ require("obsidian").setup({
     },
   },
 
-  notes_subdir = "00-inbox",
+  notes_subdir = "inbox",
   new_notes_location = "notes_subdir",
 
   -- Note ID: timestamp-slug format matching vault convention
@@ -113,7 +113,7 @@ require("obsidian").setup({
   completion = {
     nvim_cmp = false,
     blink = true,
-    min_chars = 2,
+    min_chars = 1,
   },
 
   picker = {

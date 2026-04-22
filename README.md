@@ -331,6 +331,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | Plugin                      | Purpose                                                                                                                                                              |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | blink.cmp                   | Completion                                                                                                                                                           |
+| blink.lib                   | Shared runtime library for blink ecosystem (required by blink.cmp v2)                                                                                                |
 | conform.nvim                | Formatting                                                                                                                                                           |
 | copilot.lua                 | GitHub Copilot inline ghost text                                                                                                                                     |
 | flash.nvim                  | Motion jump with labels                                                                                                                                              |
