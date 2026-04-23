@@ -15,7 +15,7 @@ A minimal Neovim 0.12+ configuration using native `vim.pack` for plugin manageme
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/nvim ~/.config/nvim
+git clone git@github.com:mhalder/nvim-native.git ~/.config/nvim
 nvim
 ```
 
@@ -32,7 +32,7 @@ Plugins install automatically on first launch.
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
 **Navigation** - mini.files explorer, fzf-lua (files, grep, buffers, symbols, vim.ui.select), yazi file manager, flash.nvim motions, tmux integration
-**Notes** - Obsidian Pi vault integration with wiki links, daily notes, templates, and checkbox toggles
+**Notes** - Obsidian Pi vault integration with wiki links, daily notes, templates, checkbox toggles, and rendered Markdown
 **Git** - Git commands and blame (mini.git), diff signs and hunk staging (mini.diff), built-in difftool
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
 
@@ -128,6 +128,8 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `xs` | Symbols            |
 | `xl` | LSP references     |
 | `xL` | Location list      |
+| `xq` | Quickfix           |
+| `xQ` | Location list      |
 
 ### Quit/Save (`<leader>j`)
 
@@ -319,6 +321,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
     ├── options.lua
     ├── plugins.lua
     ├── quicker-config.lua
+    ├── render-markdown-config.lua
     ├── sidekick-config.lua
     ├── theme.lua
     ├── treesitter-config.lua
@@ -356,6 +359,7 @@ Capital letter jumps to first/last (e.g., `[B`/`]B`). Count prefix supported (e.
 | nvim-treesitter             | Syntax                                                                                                                                                               |
 | nvim-treesitter-textobjects | Treesitter text object queries                                                                                                                                       |
 | quicker.nvim                | Quickfix enhancement                                                                                                                                                 |
+| render-markdown.nvim        | Rendered Markdown in Neovim                                                                                                                                          |
 | sidekick.nvim               | AI assistant                                                                                                                                                         |
 | tokyonight.nvim             | Theme                                                                                                                                                                |
 | trouble.nvim                | Diagnostics list                                                                                                                                                     |

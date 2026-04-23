@@ -25,6 +25,7 @@ vim.pack.add({
   { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
   { src = "https://github.com/mason-org/mason.nvim" },
   { src = "https://github.com/iamcco/markdown-preview.nvim" },
+  { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
   { src = "https://github.com/echasnovski/mini.nvim" },
   { src = "https://github.com/obsidian-nvim/obsidian.nvim" },
   { src = "https://github.com/leoluz/nvim-dap-go" },

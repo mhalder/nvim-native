@@ -169,7 +169,7 @@ require("obsidian").setup({
   },
 
   ui = {
-    enable = true,
+    enable = false, -- render-markdown.nvim handles rendering
   },
 
   footer = {

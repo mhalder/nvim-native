@@ -150,6 +150,8 @@ end, { desc = "format buffer" })
 map("n", "<leader>cg", "<cmd>FormatChanged<cr>", { desc = "format git changed" })
 
 -- code: lsp actions (supplement built-in gr* mappings)
+map("n", "grd", vim.lsp.buf.definition, { desc = "definition" })
+map("n", "grt", vim.lsp.buf.type_definition, { desc = "type definition" })
 map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "code action" })
 map("n", "<leader>cn", vim.lsp.buf.rename, { desc = "rename symbol" })
 
@@ -214,6 +216,8 @@ map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { des
 map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "symbols" })
 map("n", "<leader>xl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "lsp references" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "location list" })
+map("n", "<leader>xq", require("quicker").toggle, { desc = "quickfix" })
+map("n", "<leader>xQ", function() require("quicker").toggle({ loclist = true }) end, { desc = "loclist (quicker)" })
 
 -- git diff current file against index
 map("n", "<leader>gd", function()
