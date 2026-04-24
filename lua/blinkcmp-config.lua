@@ -1,7 +1,43 @@
 local blink = require("blink.cmp")
 
+local function ensure_blink_native()
+  if blink.library_available() then
+    return true
+  end
+
+  local home = vim.uv.os_homedir()
+  local path_parts = {
+    home .. "/.local/bin",
+    home .. "/.cargo/bin",
+  }
+
+  for _, part in ipairs(path_parts) do
+    if not vim.env.PATH:find(part, 1, true) then
+      vim.env.PATH = part .. ":" .. vim.env.PATH
+    end
+  end
+
+  if vim.fn.executable("cargo") ~= 1 then
+    return false
+  end
+
+  local ok, err = pcall(function()
+    blink.build({ force = true }):wait(600000)
+  end)
+
+  if not ok then
+    vim.schedule(function()
+      vim.notify("blink.cmp native build failed: " .. tostring(err), vim.log.levels.WARN)
+    end)
+  end
+
+  return blink.library_available()
+end
+
+ensure_blink_native()
+
 blink.setup({
-  fuzzy = { implementation = "rust" },
+  fuzzy = { implementation = "prefer_rust_with_warning" },
   signature = { enabled = true },
   snippets = { preset = "luasnip" },
   keymap = {

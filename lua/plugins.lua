@@ -6,7 +6,13 @@ local function run_pack_build(ev)
 
   vim.schedule(function()
     if name == "blink.cmp" then
-      require("blink.cmp").build():wait(60000)
+      local home = vim.uv.os_homedir()
+      for _, part in ipairs({ home .. "/.local/bin", home .. "/.cargo/bin" }) do
+        if not vim.env.PATH:find(part, 1, true) then
+          vim.env.PATH = part .. ":" .. vim.env.PATH
+        end
+      end
+      require("blink.cmp").build({ force = true }):wait(600000)
     end
     if name == "markdown-preview.nvim" then
       vim.system({ "npm", "install" }, { cwd = ev.data.path .. "/app" }):wait()
