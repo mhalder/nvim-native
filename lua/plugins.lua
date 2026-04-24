@@ -1,14 +1,22 @@
--- Build hooks for plugins that need compilation
-vim.api.nvim_create_autocmd("PackChanged", {
-  callback = function(ev)
-    local name, kind = ev.data.spec.name, ev.data.kind
-    if name == "blink.cmp" and (kind == "install" or kind == "update") then
+local function run_pack_build(ev)
+  local name, kind = ev.data.spec.name, ev.data.kind
+  if kind ~= "install" and kind ~= "update" then
+    return
+  end
+
+  vim.schedule(function()
+    if name == "blink.cmp" then
       require("blink.cmp").build():wait(60000)
     end
-    if name == "markdown-preview.nvim" and (kind == "install" or kind == "update") then
+    if name == "markdown-preview.nvim" then
       vim.system({ "npm", "install" }, { cwd = ev.data.path .. "/app" }):wait()
     end
-  end,
+  end)
+end
+
+-- Build hooks for plugins that need compilation
+vim.api.nvim_create_autocmd("PackChanged", {
+  callback = run_pack_build,
 })
 
 vim.cmd.packadd("nvim.difftool")
