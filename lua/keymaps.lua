@@ -162,9 +162,18 @@ map("n", "<leader>wa", function()
   vim.notify("Autoformat " .. state)
 end, { desc = "toggle autoformat" })
 map("n", "<leader>wc", function()
-  local current = vim.o.conceallevel
-  vim.o.conceallevel = current == 0 and 2 or 0
-  vim.notify("Conceal " .. (vim.o.conceallevel == 0 and "off" or "on"))
+  local ft = vim.bo.filetype
+  local ok, render_markdown = pcall(require, "render-markdown")
+
+  if ok and (ft == "markdown" or ft == "Avante" or ft == "codecompanion") then
+    render_markdown.buf_toggle()
+    vim.notify("Toggled markdown render for buffer")
+    return
+  end
+
+  local current = vim.wo.conceallevel
+  vim.wo.conceallevel = current == 0 and 2 or 0
+  vim.notify("Conceal " .. (vim.wo.conceallevel == 0 and "off" or "on"))
 end, { desc = "toggle conceal" })
 
 -- terminal

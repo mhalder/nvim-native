@@ -151,13 +151,13 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 
 ### Window/Toggle (`<leader>w`)
 
-| Key  | Action             |
-| ---- | ------------------ |
-| `wa` | Toggle autoformat  |
-| `wc` | Toggle conceal     |
-| `wd` | Toggle diagnostics |
-| `wm` | Message history    |
-| `wz` | Toggle zoom        |
+| Key  | Action                           |
+| ---- | -------------------------------- |
+| `wa` | Toggle autoformat                |
+| `wc` | Toggle markdown render / conceal |
+| `wd` | Toggle diagnostics               |
+| `wm` | Message history                  |
+| `wz` | Toggle zoom                      |
 
 ### Git (`<leader>g`)
 
