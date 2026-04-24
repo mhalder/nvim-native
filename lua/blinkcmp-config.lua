@@ -1,6 +1,7 @@
 local blink = require("blink.cmp")
 
 blink.setup({
+  fuzzy = { implementation = "rust" },
   signature = { enabled = true },
   snippets = { preset = "luasnip" },
   keymap = {

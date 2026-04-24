@@ -81,6 +81,15 @@ In buffers picker, press `<C-d>` to wipe the selected buffer.
 | `M-[` | Previous suggestion |
 | `C-]` | Dismiss             |
 
+### Completion popup
+
+| Key     | Action              |
+| ------- | ------------------- |
+| `Tab`   | Next item / snippet |
+| `S-Tab` | Previous / back     |
+| `C-d`   | Scroll docs down    |
+| `C-u`   | Scroll docs up      |
+
 ### Debug (`<leader>d`)
 
 | Key  | Action                 |
