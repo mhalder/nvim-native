@@ -32,7 +32,7 @@ Plugins install automatically on first launch.
 **Debugging** - DAP with Python, Go, and Rust support and virtual text
 **Buffers** - Native tabline showing all open buffers with modified indicator, Ctrl+arrow navigation
 **Navigation** - mini.files explorer, fzf-lua (files, grep, buffers, symbols, vim.ui.select), yazi file manager, flash.nvim motions, tmux integration
-**Notes** - Obsidian Pi vault integration with wiki links, daily notes, templates, checkbox toggles, and rendered Markdown
+**Notes** - Obsidian Pi vault integration with wiki links, daily notes, templates, checkbox toggles, and render-markdown.nvim-rendered Markdown
 **Git** - Git commands and blame (mini.git), diff signs and hunk staging (mini.diff), built-in difftool
 **Utilities** - Auto project root, cursor restore, terminal background sync, buffer zoom (mini.misc)
 

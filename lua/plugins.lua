@@ -1,3 +1,37 @@
+local function ensure_path(parts)
+  for _, part in ipairs(parts) do
+    if not vim.env.PATH:find(part, 1, true) then
+      vim.env.PATH = part .. ":" .. vim.env.PATH
+    end
+  end
+end
+
+local function build_blink(path)
+  local home = vim.uv.os_homedir()
+  ensure_path({ home .. "/.local/bin", home .. "/.cargo/bin" })
+
+  if vim.fn.executable("cargo") ~= 1 then
+    vim.notify("cargo missing; cannot build blink.cmp native library", vim.log.levels.ERROR)
+    return
+  end
+
+  vim.notify("Building blink.cmp native library", vim.log.levels.INFO)
+  local obj = vim.system({ "cargo", "build", "--release" }, { cwd = path }):wait()
+  if obj.code ~= 0 then
+    local msg = obj.stderr ~= "" and obj.stderr or obj.stdout
+    vim.notify("blink.cmp native build failed:\n" .. msg, vim.log.levels.ERROR)
+    return
+  end
+
+  local native = require("blink.lib.native")
+  local commit = native.git_commit(path)
+  local platform = native.platform()
+  local src = path .. "/target/release/libblink_cmp_fuzzy" .. platform.lib_extension
+  local dst = native.library_path("blink_cmp_fuzzy", commit)
+  native.mv(src, dst)
+  vim.notify("blink.cmp native library built", vim.log.levels.INFO)
+end
+
 local function run_pack_build(ev)
   local name, kind = ev.data.spec.name, ev.data.kind
   if kind ~= "install" and kind ~= "update" then
@@ -6,13 +40,7 @@ local function run_pack_build(ev)
 
   vim.schedule(function()
     if name == "blink.cmp" then
-      local home = vim.uv.os_homedir()
-      for _, part in ipairs({ home .. "/.local/bin", home .. "/.cargo/bin" }) do
-        if not vim.env.PATH:find(part, 1, true) then
-          vim.env.PATH = part .. ":" .. vim.env.PATH
-        end
-      end
-      require("blink.cmp").build({ force = true }):wait(600000)
+      build_blink(ev.data.path)
     end
     if name == "markdown-preview.nvim" then
       vim.system({ "npm", "install" }, { cwd = ev.data.path .. "/app" }):wait()

@@ -169,7 +169,7 @@ require("obsidian").setup({
   },
 
   ui = {
-    enable = false, -- render-markdown.nvim handles rendering
+    enable = false, -- render-markdown.nvim handles markdown rendering
   },
 
   footer = {
@@ -179,10 +179,8 @@ require("obsidian").setup({
   },
 
   checkbox = {
-    order = { " ", "x", ">", "~" },
-    [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-    ["x"] = { char = "", hl_group = "ObsidianDone" },
-    [">"] = { char = "", hl_group = "ObsidianRightArrow" },
-    ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+    enabled = true,
+    create_new = true,
+    order = { " ", "~", "!", ">", "x" },
   },
 })
